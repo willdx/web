@@ -1,0 +1,808 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.理解Python模块 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../" />
+    
+    
+    <link rel="prev" href="../3.模块.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../1.简述.html">
+            
+                <a href="../1.简述.html">
+            
+                    
+                    一.简述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../1.简述/1.为什么使用python.html">
+            
+                <a href="../1.简述/1.为什么使用python.html">
+            
+                    
+                    1.为什么使用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../1.简述/2.python安装.html">
+            
+                <a href="../1.简述/2.python安装.html">
+            
+                    
+                    2.python安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../1.简述/3.python解释器.html">
+            
+                <a href="../1.简述/3.python解释器.html">
+            
+                    
+                    3.python解释器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../1.简述/4.python交互环境.html">
+            
+                <a href="../1.简述/4.python交互环境.html">
+            
+                    
+                    4.python交互环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../1.简述/5.python你怎么这么慢.html">
+            
+                <a href="../1.简述/5.python你怎么这么慢.html">
+            
+                    
+                    5.python你为什么这么慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../2.语法.html">
+            
+                <a href="../2.语法.html">
+            
+                    
+                    二.语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../2.语法/1.缩进.html">
+            
+                <a href="../2.语法/1.缩进.html">
+            
+                    
+                    1.缩进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../2.语法/2.简单数据类型.html">
+            
+                <a href="../2.语法/2.简单数据类型.html">
+            
+                    
+                    2.简单数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../2.语法/3.字符串编码.html">
+            
+                <a href="../2.语法/3.字符串编码.html">
+            
+                    
+                    3.字符串编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../2.语法/4.列表和元组.html">
+            
+                <a href="../2.语法/4.列表和元组.html">
+            
+                    
+                    4.列表和元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../2.语法/5.字典和集合.html">
+            
+                <a href="../2.语法/5.字典和集合.html">
+            
+                    
+                    5.字典和集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../2.语法/6.条件判断if.html">
+            
+                <a href="../2.语法/6.条件判断if.html">
+            
+                    
+                    6.条件判断if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../2.语法/7.输入和输出.html">
+            
+                <a href="../2.语法/7.输入和输出.html">
+            
+                    
+                    7.输入和输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    8.循环
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.8.1" data-path="../2.语法/2.1循环/1.生成式.html">
+            
+                <a href="../2.语法/2.1循环/1.生成式.html">
+            
+                    
+                    1.生成式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.2" data-path="../2.语法/2.1循环/2.生成器.html">
+            
+                <a href="../2.语法/2.1循环/2.生成器.html">
+            
+                    
+                    2.生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.3" data-path="../2.语法/2.1循环/3.可迭代对象&迭代器.html">
+            
+                <a href="../2.语法/2.1循环/3.可迭代对象&迭代器.html">
+            
+                    
+                    3.可迭代对象&迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../3.模块.html">
+            
+                <a href="../3.模块.html">
+            
+                    
+                    三.模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.1.1" data-path="1.理解Python模块.html">
+            
+                <a href="1.理解Python模块.html">
+            
+                    
+                    1.理解Python模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    2.标准库模块使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="2.标准库模块使用/1.os模块.html">
+            
+                <a href="2.标准库模块使用/1.os模块.html">
+            
+                    
+                    1.os模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="2.标准库模块使用/2.sys模块.html">
+            
+                <a href="2.标准库模块使用/2.sys模块.html">
+            
+                    
+                    2.sys模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="2.标准库模块使用/3.re正则表达式.html">
+            
+                <a href="2.标准库模块使用/3.re正则表达式.html">
+            
+                    
+                    3.re正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="2.标准库模块使用/4.时间处理.html">
+            
+                <a href="2.标准库模块使用/4.时间处理.html">
+            
+                    
+                    4.时间处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.5" data-path="2.标准库模块使用/5.简单加密算法.html">
+            
+                <a href="2.标准库模块使用/5.简单加密算法.html">
+            
+                    
+                    5.简单加密算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.6" data-path="2.标准库模块使用/6.网络请求.html">
+            
+                <a href="2.标准库模块使用/6.网络请求.html">
+            
+                    
+                    6.网络请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    3.第三方库使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="3.第三方库使用/1.requests.html">
+            
+                <a href="3.第三方库使用/1.requests.html">
+            
+                    
+                    1.requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="3.第三方库使用/2.tkinter.html">
+            
+                <a href="3.第三方库使用/2.tkinter.html">
+            
+                    
+                    2.tkinter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    4.自建库给他人使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="4.自建库给他人使用/1.自建库.html">
+            
+                <a href="4.自建库给他人使用/1.自建库.html">
+            
+                    
+                    1.自建库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="4.自建库给他人使用/2.pypi服务器.html">
+            
+                <a href="4.自建库给他人使用/2.pypi服务器.html">
+            
+                    
+                    2.pypi服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="4.自建库给他人使用/3.打包并上传pypi.html">
+            
+                <a href="4.自建库给他人使用/3.打包并上传pypi.html">
+            
+                    
+                    3.打包并上传pypi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.理解Python模块</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7406;&#x89E3;python&#x6A21;&#x5757;">&#x7406;&#x89E3;Python&#x6A21;&#x5757;</h1>
+<h2 id="&#x4E00;&#x4E2A;python&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x5757;">&#x4E00;&#x4E2A;Python&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x5757;</h2>
+<blockquote>
+<p>&#x9700;&#x6C42;:  &#x8F93;&#x5165;&#x4E00;&#x4E32;&#x5B57;&#x7B26;, &#x5206;&#x522B;&#x7EDF;&#x8BA1;&#x51FA;&#x5176;&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;,&#x7A7A;&#x683C;,&#x6570;&#x5B57;&#x548C;&#x5176;&#x5B83;&#x5B57;&#x7B26;&#x7684;&#x4E2A;&#x6570;</p>
+</blockquote>
+<p>isalpha&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x5B57;&#x6BCD;
+isspace&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x7A7A;&#x683C;
+isdigit&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x5B57;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">junger</span><span class="hljs-params">(string)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5224;&#x65AD;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x3001;&#x7A7A;&#x683C;&#x3001;&#x6570;&#x5B57;&#x548C;&#x5176;&#x5B83;&#x5B57;&#x7B26;&#x7684;&#x4E2A;&#x6570;
+    &quot;&quot;&quot;</span>
+    alpha = <span class="hljs-number">0</span>
+    space = <span class="hljs-number">0</span>
+    digit = <span class="hljs-number">0</span>
+    other = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> string:
+        <span class="hljs-keyword">if</span> i.isalpha():
+            alpha += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">elif</span> i.isspace():
+            space+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">elif</span> i.isdigit():           
+            digit+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>:
+            other+=<span class="hljs-number">1</span>
+    print(<span class="hljs-string">&quot;&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6570;&#x91CF;:{}&quot;</span>.format(alpha))
+    print(<span class="hljs-string">&quot;&#x7A7A;&#x683C;&#x6570;&#x91CF;:{}&quot;</span>.format(space))
+    print(<span class="hljs-string">&quot;&#x6570;&#x5B57;&#x6570;&#x91CF;:{}&quot;</span>.format(digit))
+    print(<span class="hljs-string">&quot;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x6570;&#x91CF;:{}&quot;</span>.format(other))
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    <span class="hljs-comment">#string = input(&quot;&#x8BF7;&#x8F93;&#x5165;&#x5F85;&#x5206;&#x6790;&#x7684;&#x5B57;&#x7B26;&#x4E32;:\n&quot;)</span>
+    string = raw_input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x5F85;&#x5206;&#x6790;&#x7684;&#x5B57;&#x7B26;&#x4E32;:\n&quot;</span>)
+    junger(string)
+</code></pre>
+<h2 id="&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;">&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;</h2>
+<blockquote>
+<p>if <strong>name</strong>==&#x201C;<strong>main</strong>&#x201D;:  &#x542B;&#x4E49;&#x5C31;&#x662F;, &#x5F53;Python&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;, &#x6267;&#x884C;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x4E0B;&#x7684;&#x8BED;&#x53E5;, &#x53EF;&#x4EE5;&#x770B;&#x505A;&#x662F; <strong>Python&#x6587;&#x4EF6;&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;&#x5165;&#x53E3;</strong>  </p>
+</blockquote>
+<pre><code class="lang-shell">&#x279C;  ~ python junger.py
+&#x8BF7;&#x8F93;&#x5165;&#x5F85;&#x5206;&#x6790;&#x7684;&#x5B57;&#x7B26;&#x4E32;:
+my name is will!
+&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6570;&#x91CF;:12
+&#x7A7A;&#x683C;&#x6570;&#x91CF;:3
+&#x6570;&#x5B57;&#x6570;&#x91CF;:0
+&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x6570;&#x91CF;:1
+</code></pre>
+<h2 id="&#x4F5C;&#x4E3A;&#x6A21;&#x5757;&#x5BFC;&#x5165;">&#x4F5C;&#x4E3A;&#x6A21;&#x5757;&#x5BFC;&#x5165;</h2>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x628A;&#x811A;&#x672C;&#x653E;&#x5230;&#x4EFB;&#x610F;&#x76EE;&#x5F55;&#x4E0B;, &#x547D;&#x540D;&#x4E3A;junger.py, &#x7136;&#x540E;, &#x5728;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x76EE;&#x5F55;&#x6267;&#x884C;ipython, &#x8FDB;&#x5165;&#x4EA4;&#x4E92;&#x89E3;&#x91CA;&#x5668;&#x73AF;&#x5883;;<br>&#x6B64;&#x65F6;, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; import &#x7684;&#x65B9;&#x5F0F;, &#x5C06;Python&#x4EE3;&#x7801;&#x505A;&#x4E3A;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x5BFC;&#x5165;&#x8FDB;&#x6765;, &#x76F4;&#x63A5;&#x5F53;&#x6210;&#x51FD;&#x6570;&#x6765;&#x4F7F;&#x7528;;  </p>
+</blockquote>
+<pre><code class="lang-python">In [<span class="hljs-number">4</span>]: <span class="hljs-keyword">from</span> junger <span class="hljs-keyword">import</span> junger
+
+In [<span class="hljs-number">5</span>]: junger(<span class="hljs-string">&quot;my name is will!&quot;</span>)
+&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6570;&#x91CF;:<span class="hljs-number">12</span>
+&#x7A7A;&#x683C;&#x6570;&#x91CF;:<span class="hljs-number">3</span>
+&#x6570;&#x5B57;&#x6570;&#x91CF;:<span class="hljs-number">0</span>
+&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x6570;&#x91CF;:<span class="hljs-number">1</span>
+</code></pre>
+<h2 id="&#x5305;&#x542B;initpy&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E5F;&#x88AB;&#x770B;&#x6210;&#x4E00;&#x4E2A;python&#x6A21;&#x5757;">&#x5305;&#x542B;<strong>init</strong>.py&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E5F;&#x88AB;&#x770B;&#x6210;&#x4E00;&#x4E2A;python&#x6A21;&#x5757;</h2>
+<blockquote>
+<p><strong>init</strong>.py&#x662F;&#x521D;&#x59CB;&#x5316;&#x6587;&#x4EF6;, &#x91CC;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5316;&#x7684;&#x4EE3;&#x7801;, &#x5BFC;&#x5165;&#x6A21;&#x5757;&#x5185;&#x5BB9;&#x524D;&#x4F1A;&#x6267;&#x884C;<strong>init</strong>.py&#x6587;&#x4EF6;&#x4EE3;&#x7801;</p>
+</blockquote>
+<pre><code class="lang-shell">&#x279C;  ~ mkdir test_package
+&#x279C;  ~ mv junger.py test_package
+&#x279C;  ~ cd test_package
+&#x279C;  test_package touch __init__.py
+&#x279C;  test_package vim __init__.py
+&#x279C;  test_package
+&#x279C;  test_package cat __init__.py
+print(&quot;__init__&quot;)
+&#x279C;  test_package ls
+__init__.py junger.py
+&#x279C;  test_package cd ..
+&#x279C;  ~ ipython
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 05:52:31)
+Type &apos;copyright&apos;, &apos;credits&apos; or &apos;license&apos; for more information
+IPython 6.4.0 -- An enhanced Interactive Python. Type &apos;?&apos; for help.
+
+__init__
+In [1]: from test_package.junger import  junger
+
+In [2]: junger(&quot;my name is will!&quot;)
+&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6570;&#x91CF;:12
+&#x7A7A;&#x683C;&#x6570;&#x91CF;:3
+&#x6570;&#x5B57;&#x6570;&#x91CF;:0
+&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x6570;&#x91CF;:1
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../3.模块.html" class="navigation navigation-prev " aria-label="Previous page: 三.模块">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../" class="navigation navigation-next " aria-label="Next page: 2.标准库模块使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.理解Python模块","level":"3.1.1","depth":2,"next":{"title":"2.标准库模块使用","level":"3.1.2","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.os模块","level":"3.1.2.1","depth":3,"path":"3.模块/2.标准库模块使用/1.os模块.md","ref":"3.模块/2.标准库模块使用/1.os模块.md","articles":[]},{"title":"2.sys模块","level":"3.1.2.2","depth":3,"path":"3.模块/2.标准库模块使用/2.sys模块.md","ref":"3.模块/2.标准库模块使用/2.sys模块.md","articles":[]},{"title":"3.re正则表达式","level":"3.1.2.3","depth":3,"path":"3.模块/2.标准库模块使用/3.re正则表达式.md","ref":"3.模块/2.标准库模块使用/3.re正则表达式.md","articles":[]},{"title":"4.时间处理","level":"3.1.2.4","depth":3,"path":"3.模块/2.标准库模块使用/4.时间处理.md","ref":"3.模块/2.标准库模块使用/4.时间处理.md","articles":[]},{"title":"5.简单加密算法","level":"3.1.2.5","depth":3,"path":"3.模块/2.标准库模块使用/5.简单加密算法.md","ref":"3.模块/2.标准库模块使用/5.简单加密算法.md","articles":[]},{"title":"6.网络请求","level":"3.1.2.6","depth":3,"path":"3.模块/2.标准库模块使用/6.网络请求.md","ref":"3.模块/2.标准库模块使用/6.网络请求.md","articles":[]}]},"previous":{"title":"三.模块","level":"3.1","depth":1,"path":"3.模块.md","ref":"3.模块.md","articles":[{"title":"1.理解Python模块","level":"3.1.1","depth":2,"path":"3.模块/1.理解Python模块.md","ref":"3.模块/1.理解Python模块.md","articles":[]},{"title":"2.标准库模块使用","level":"3.1.2","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.os模块","level":"3.1.2.1","depth":3,"path":"3.模块/2.标准库模块使用/1.os模块.md","ref":"3.模块/2.标准库模块使用/1.os模块.md","articles":[]},{"title":"2.sys模块","level":"3.1.2.2","depth":3,"path":"3.模块/2.标准库模块使用/2.sys模块.md","ref":"3.模块/2.标准库模块使用/2.sys模块.md","articles":[]},{"title":"3.re正则表达式","level":"3.1.2.3","depth":3,"path":"3.模块/2.标准库模块使用/3.re正则表达式.md","ref":"3.模块/2.标准库模块使用/3.re正则表达式.md","articles":[]},{"title":"4.时间处理","level":"3.1.2.4","depth":3,"path":"3.模块/2.标准库模块使用/4.时间处理.md","ref":"3.模块/2.标准库模块使用/4.时间处理.md","articles":[]},{"title":"5.简单加密算法","level":"3.1.2.5","depth":3,"path":"3.模块/2.标准库模块使用/5.简单加密算法.md","ref":"3.模块/2.标准库模块使用/5.简单加密算法.md","articles":[]},{"title":"6.网络请求","level":"3.1.2.6","depth":3,"path":"3.模块/2.标准库模块使用/6.网络请求.md","ref":"3.模块/2.标准库模块使用/6.网络请求.md","articles":[]}]},{"title":"3.第三方库使用","level":"3.1.3","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.requests","level":"3.1.3.1","depth":3,"path":"3.模块/3.第三方库使用/1.requests.md","ref":"3.模块/3.第三方库使用/1.requests.md","articles":[]},{"title":"2.tkinter","level":"3.1.3.2","depth":3,"path":"3.模块/3.第三方库使用/2.tkinter.md","ref":"3.模块/3.第三方库使用/2.tkinter.md","articles":[]}]},{"title":"4.自建库给他人使用","level":"3.1.4","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.自建库","level":"3.1.4.1","depth":3,"path":"3.模块/4.自建库给他人使用/1.自建库.md","ref":"3.模块/4.自建库给他人使用/1.自建库.md","articles":[]},{"title":"2.pypi服务器","level":"3.1.4.2","depth":3,"path":"3.模块/4.自建库给他人使用/2.pypi服务器.md","ref":"3.模块/4.自建库给他人使用/2.pypi服务器.md","articles":[]},{"title":"3.打包并上传pypi","level":"3.1.4.3","depth":3,"path":"3.模块/4.自建库给他人使用/3.打包并上传pypi.md","ref":"3.模块/4.自建库给他人使用/3.打包并上传pypi.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3.模块/1.理解Python模块.md","mtime":"2018-06-12T03:13:06.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-12T03:16:28.834Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
