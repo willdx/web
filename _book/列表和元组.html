@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>9.函数 · GitBook</title>
+        <title>4.列表和元组 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="定义函数.md" />
+    <link rel="next" href="字典和集合.html" />
     
     
-    <link rel="prev" href="可迭代对象&迭代器.html" />
+    <link rel="prev" href="字符串编码.html" />
     
 
     </head>
@@ -259,7 +259,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.4" data-path="列表和元组.html">
+        <li class="chapter active" data-level="2.1.4" data-path="列表和元组.html">
             
                 <a href="列表和元组.html">
             
@@ -369,7 +369,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.1.9" data-path="./">
+        <li class="chapter " data-level="2.1.9" data-path="./">
             
                 <a href="./">
             
@@ -440,7 +440,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.1.10" data-path="./">
+        <li class="chapter " data-level="2.1.10" data-path="./">
             
                 <a href="./">
             
@@ -524,7 +524,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.1.2" data-path="./">
+        <li class="chapter " data-level="3.1.2" data-path="./">
             
                 <a href="./">
             
@@ -621,7 +621,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.1.3" data-path="./">
+        <li class="chapter " data-level="3.1.3" data-path="./">
             
                 <a href="./">
             
@@ -666,7 +666,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.1.4" data-path="./">
+        <li class="chapter " data-level="3.1.4" data-path="./">
             
                 <a href="./">
             
@@ -759,7 +759,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >9.函数</a>
+        <a href="." >4.列表和元组</a>
     </h1>
 </div>
 
@@ -774,8 +774,103 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="webdev">webdev</h1>
-<p>webdev</p>
+                                <h1 id="list&#x548C;tuple">list&#x548C;tuple</h1>
+<h1 id="python&#x8BED;&#x6CD5;&#x5217;&#x8868;&#x548C;&#x5143;&#x7EC4;">Python/&#x8BED;&#x6CD5;/&#x5217;&#x8868;&#x548C;&#x5143;&#x7EC4;</h1>
+<p>&#x5217;&#x8868;&#x548C;&#x5143;&#x7EC4;&#x90FD;&#x662F;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;, &#x533A;&#x522B;&#x5728;&#x4E8E;tuple&#x4E00;&#x7ECF;&#x5B9A;&#x4E49;&#x65E0;&#x6CD5;&#x66F4;&#x6539;, &#x800C;list&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x66F4;&#x6539;;</p>
+<p><img src="https://qn.imdancer.com/6FF283FD-AA7E-42EA-8C78-5367F6103F0F.png" alt="6FF283FD-AA7E-42EA-8C78-5367F6103F0F"></p>
+<p><img src="https://qn.imdancer.com/805A466E-7FE5-41FD-9542-0C1DF79D00DD.png" alt="805A466E-7FE5-41FD-9542-0C1DF79D00DD"></p>
+<h2 id="&#x5217;&#x8868;">&#x5217;&#x8868;</h2>
+<h2 id="&#x5E38;&#x89C4;&#x64CD;&#x4F5C;">&#x5E38;&#x89C4;&#x64CD;&#x4F5C;</h2>
+<pre><code class="lang-python">In [<span class="hljs-number">37</span>]: lis = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+
+In [<span class="hljs-number">38</span>]: lis.append(<span class="hljs-number">4</span>)
+
+In [<span class="hljs-number">39</span>]: lis
+Out[<span class="hljs-number">39</span>]: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+In [<span class="hljs-number">40</span>]: lis.insert(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>)
+
+In [<span class="hljs-number">41</span>]: lis
+Out[<span class="hljs-number">41</span>]: [<span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+In [<span class="hljs-number">43</span>]: help(lis.extend)
+
+In [<span class="hljs-number">44</span>]: lis2 = [<span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]
+
+In [<span class="hljs-number">45</span>]: lis.extend(lis2)
+
+In [<span class="hljs-number">46</span>]: lis
+Out[<span class="hljs-number">46</span>]: [<span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]
+
+In [<span class="hljs-number">47</span>]: lis.pop()
+Out[<span class="hljs-number">47</span>]: <span class="hljs-number">8</span>
+
+In [<span class="hljs-number">48</span>]: lis
+Out[<span class="hljs-number">48</span>]: [<span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+
+In [<span class="hljs-number">49</span>]: lis.remove(<span class="hljs-number">3</span>)
+
+In [<span class="hljs-number">50</span>]: lis.sort()
+
+In [<span class="hljs-number">51</span>]: lis
+Out[<span class="hljs-number">51</span>]: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+
+In [<span class="hljs-number">52</span>]: lis.reverse()
+
+In [<span class="hljs-number">53</span>]: lis
+Out[<span class="hljs-number">53</span>]: [<span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]
+
+In [<span class="hljs-number">56</span>]: lis.index(<span class="hljs-number">1</span>)
+Out[<span class="hljs-number">56</span>]: <span class="hljs-number">5</span>
+In [<span class="hljs-number">60</span>]: lis.count(<span class="hljs-number">1</span>)
+<span class="hljs-number">1</span>
+</code></pre>
+<h3 id="&#x5217;&#x8868;&#x666E;&#x901A;&#x8FED;&#x4EE3;">&#x5217;&#x8868;&#x666E;&#x901A;&#x8FED;&#x4EE3;</h3>
+<pre><code class="lang-python">In [<span class="hljs-number">35</span>]: <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]:
+    ...:     print(i)
+    ...:
+<span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">3</span>
+</code></pre>
+<h3 id="&#x5217;&#x8868;&#x5E26;index&#x7684;&#x8FED;&#x4EE3;">&#x5217;&#x8868;&#x5E26;index&#x7684;&#x8FED;&#x4EE3;</h3>
+<pre><code class="lang-python">In [<span class="hljs-number">36</span>]: <span class="hljs-keyword">for</span> index, value <span class="hljs-keyword">in</span> enumerate([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]):
+    ...:     print(index, value)
+    ...:
+<span class="hljs-number">0</span> <span class="hljs-number">1</span>
+<span class="hljs-number">1</span> <span class="hljs-number">2</span>
+<span class="hljs-number">2</span> <span class="hljs-number">3</span>
+</code></pre>
+<h2 id="&#x5217;&#x8868;&#x7EC4;&#x5408;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;">&#x5217;&#x8868;&#x7EC4;&#x5408;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</h2>
+<pre><code class="lang-python">In [<span class="hljs-number">54</span>]: <span class="hljs-string">&quot;,&quot;</span>.join([str(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> lis <span class="hljs-keyword">if</span> i])
+Out[<span class="hljs-number">54</span>]: <span class="hljs-string">&apos;7,6,5,4,2,1&apos;</span>
+</code></pre>
+<h2 id="&#x5207;&#x7247;">&#x5207;&#x7247;</h2>
+<pre><code class="lang-python">In [<span class="hljs-number">1</span>]: a = range(<span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">2</span>]: a
+Out[<span class="hljs-number">2</span>]: range(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">3</span>]: a[:]
+Out[<span class="hljs-number">3</span>]: range(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>)
+
+In [<span class="hljs-number">4</span>]: a[<span class="hljs-number">0</span>:<span class="hljs-number">1</span>]
+Out[<span class="hljs-number">4</span>]: range(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+
+In [<span class="hljs-number">5</span>]: a[<span class="hljs-number">-1</span>]
+Out[<span class="hljs-number">5</span>]: <span class="hljs-number">9</span>
+
+In [<span class="hljs-number">6</span>]: a[<span class="hljs-number">-1</span>:<span class="hljs-number">-3</span>]
+Out[<span class="hljs-number">6</span>]: range(<span class="hljs-number">9</span>, <span class="hljs-number">7</span>)
+
+In [<span class="hljs-number">7</span>]: a[<span class="hljs-number">0</span>:<span class="hljs-number">8</span>:<span class="hljs-number">2</span>]
+Out[<span class="hljs-number">7</span>]: range(<span class="hljs-number">0</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>)
+
+In [<span class="hljs-number">8</span>]: [a[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a[<span class="hljs-number">0</span>:<span class="hljs-number">8</span>:<span class="hljs-number">2</span>] <span class="hljs-keyword">if</span> i]
+Out[<span class="hljs-number">8</span>]: [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>]
+
+In [<span class="hljs-number">9</span>]:
+</code></pre>
 
                                 
                                 </section>
@@ -803,12 +898,12 @@
 
             
                 
-                <a href="可迭代对象&迭代器.html" class="navigation navigation-prev " aria-label="Previous page: 3.可迭代对象&迭代器">
+                <a href="字符串编码.html" class="navigation navigation-prev " aria-label="Previous page: 3.字符串编码">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="定义函数.md" class="navigation navigation-next " aria-label="Next page: 1.定义函数">
+                <a href="字典和集合.html" class="navigation navigation-next " aria-label="Next page: 5.字典和集合">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -819,7 +914,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.函数","level":"2.1.9","depth":2,"next":{"title":"1.定义函数","level":"2.1.9.1","depth":3,"path":"定义函数.md","ref":"定义函数.md","articles":[]},"previous":{"title":"3.可迭代对象&迭代器","level":"2.1.8.3","depth":3,"path":"可迭代对象&迭代器.md","ref":"可迭代对象&迭代器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-23T04:14:17.447Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-23T06:55:12.166Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.列表和元组","level":"2.1.4","depth":2,"next":{"title":"5.字典和集合","level":"2.1.5","depth":2,"path":"字典和集合.md","ref":"字典和集合.md","articles":[]},"previous":{"title":"3.字符串编码","level":"2.1.3","depth":2,"path":"字符串编码.md","ref":"字符串编码.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"列表和元组.md","mtime":"2018-06-23T04:14:17.414Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-23T06:55:12.166Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>9.函数 · GitBook</title>
+        <title>3.可迭代对象&迭代器 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="定义函数.md" />
+    <link rel="next" href="./" />
     
     
-    <link rel="prev" href="可迭代对象&迭代器.html" />
+    <link rel="prev" href="生成器.html" />
     
 
     </head>
@@ -351,7 +351,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.8.3" data-path="可迭代对象&迭代器.html">
+        <li class="chapter active" data-level="2.1.8.3" data-path="可迭代对象&迭代器.html">
             
                 <a href="可迭代对象&迭代器.html">
             
@@ -369,7 +369,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.1.9" data-path="./">
+        <li class="chapter " data-level="2.1.9" data-path="./">
             
                 <a href="./">
             
@@ -440,7 +440,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.1.10" data-path="./">
+        <li class="chapter " data-level="2.1.10" data-path="./">
             
                 <a href="./">
             
@@ -524,7 +524,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.1.2" data-path="./">
+        <li class="chapter " data-level="3.1.2" data-path="./">
             
                 <a href="./">
             
@@ -621,7 +621,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.1.3" data-path="./">
+        <li class="chapter " data-level="3.1.3" data-path="./">
             
                 <a href="./">
             
@@ -666,7 +666,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.1.4" data-path="./">
+        <li class="chapter " data-level="3.1.4" data-path="./">
             
                 <a href="./">
             
@@ -759,7 +759,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >9.函数</a>
+        <a href="." >3.可迭代对象&迭代器</a>
     </h1>
 </div>
 
@@ -774,8 +774,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="webdev">webdev</h1>
-<p>webdev</p>
+                                <h1 id="&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x8FED;&#x4EE3;&#x5668;">&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&amp;&#x8FED;&#x4EE3;&#x5668;</h1>
+<p>&#x751F;&#x6210;&#x5668;&#x90FD;&#x662F;<code>Iterator(&#x8FED;&#x4EE3;&#x5668;)</code>&#xFF0C;&#x4F46;list, dict, str&#x867D;&#x7136;&#x662F;<code>Iterable(&#x53EF;&#x8FED;&#x4EE3;&#x7684;)</code>, &#x5374;&#x4E0D;&#x662F;<code>Iterator(&#x8FED;&#x4EE3;&#x5668;)</code>;</p>
+<h2 id="&#x5982;&#x679C;&#x662F;&#x751F;&#x6210;&#x5668;&#x90A3;&#x4E48;&#x5FC5;&#x5B9A;&#x662F;&#x8FED;&#x4EE3;&#x5668;"><code>&#x5982;&#x679C;&#x662F;&#x751F;&#x6210;&#x5668;,&#x90A3;&#x4E48;&#x5FC5;&#x5B9A;&#x662F;&#x8FED;&#x4EE3;&#x5668;</code>?</h2>
+<blockquote>
+<p>&#x5BF9;&#x7684;, &#x4E3A;&#x4EC0;&#x4E48;&#x5462;?</p>
+<p>Python&#x7684;for&#x5FAA;&#x73AF;&#x672C;&#x8D28;&#x4E0A;, &#x662F;&#x901A;&#x8FC7;&#x4E0D;&#x65AD;&#x8C03;&#x7528;next()&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7684;, &#x4F8B;&#x5982;&#xFF1A;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]:
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#x5B8C;&#x5168;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x9996;&#x5148;&#x83B7;&#x5F97;Iterator&#x5BF9;&#x8C61;:</span>
+it = iter([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+<span class="hljs-comment"># &#x5FAA;&#x73AF;:</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-comment"># &#x83B7;&#x5F97;&#x4E0B;&#x4E00;&#x4E2A;&#x503C;:</span>
+        x = next(it)
+    <span class="hljs-keyword">except</span> StopIteration:
+        <span class="hljs-comment"># &#x9047;&#x5230;StopIteration&#x5C31;&#x9000;&#x51FA;&#x5FAA;&#x73AF;</span>
+        <span class="hljs-keyword">break</span>
+</code></pre>
+<h2 id=""> </h2>
 
                                 
                                 </section>
@@ -803,12 +824,12 @@
 
             
                 
-                <a href="可迭代对象&迭代器.html" class="navigation navigation-prev " aria-label="Previous page: 3.可迭代对象&迭代器">
+                <a href="生成器.html" class="navigation navigation-prev " aria-label="Previous page: 2.生成器">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="定义函数.md" class="navigation navigation-next " aria-label="Next page: 1.定义函数">
+                <a href="./" class="navigation navigation-next " aria-label="Next page: 9.函数">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -819,7 +840,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.函数","level":"2.1.9","depth":2,"next":{"title":"1.定义函数","level":"2.1.9.1","depth":3,"path":"定义函数.md","ref":"定义函数.md","articles":[]},"previous":{"title":"3.可迭代对象&迭代器","level":"2.1.8.3","depth":3,"path":"可迭代对象&迭代器.md","ref":"可迭代对象&迭代器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-23T04:14:17.447Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-23T06:55:12.166Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.可迭代对象&迭代器","level":"2.1.8.3","depth":3,"next":{"title":"9.函数","level":"2.1.9","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.定义函数","level":"2.1.9.1","depth":3,"path":"定义函数.md","ref":"定义函数.md","articles":[]},{"title":"2.调用函数","level":"2.1.9.2","depth":3,"path":"调用函数.md","ref":"调用函数.md","articles":[]},{"title":"3.递归调用函数","level":"2.1.9.3","depth":3,"path":"递归调用函数.md","ref":"递归调用函数.md","articles":[]},{"title":"4.函数的参数","level":"2.1.9.4","depth":3,"path":"函数的参数.md","ref":"函数的参数.md","articles":[]}]},"previous":{"title":"2.生成器","level":"2.1.8.2","depth":3,"path":"生成器.md","ref":"生成器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"可迭代对象&迭代器.md","mtime":"2018-06-23T06:16:55.259Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-23T06:55:12.166Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
