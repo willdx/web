@@ -1,0 +1,838 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8.循环 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="生成式.html" />
+    
+    
+    <link rel="prev" href="输入和输出.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="简述.html">
+            
+                <a href="简述.html">
+            
+                    
+                    一.简述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="为什么使用python.html">
+            
+                <a href="为什么使用python.html">
+            
+                    
+                    1.为什么使用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="python安装.html">
+            
+                <a href="python安装.html">
+            
+                    
+                    2.python安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="python解释器.html">
+            
+                <a href="python解释器.html">
+            
+                    
+                    3.python解释器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="python交互环境.html">
+            
+                <a href="python交互环境.html">
+            
+                    
+                    4.python交互环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="python你怎么这么慢.html">
+            
+                <a href="python你怎么这么慢.html">
+            
+                    
+                    5.python你为什么这么慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="mac环境下使用pyenv进行Python的多版本管理.html">
+            
+                <a href="mac环境下使用pyenv进行Python的多版本管理.html">
+            
+                    
+                    6.mac环境下使用pyenv进行Python的多版本管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="使用虚拟环境隔离多个Python项目.html">
+            
+                <a href="使用虚拟环境隔离多个Python项目.html">
+            
+                    
+                    7.使用虚拟环境隔离多个python项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="语法.html">
+            
+                <a href="语法.html">
+            
+                    
+                    二.语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="缩进.html">
+            
+                <a href="缩进.html">
+            
+                    
+                    1.缩进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="简单数据类型.html">
+            
+                <a href="简单数据类型.html">
+            
+                    
+                    2.简单数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="字符串编码.html">
+            
+                <a href="字符串编码.html">
+            
+                    
+                    3.字符串编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="列表和元组.html">
+            
+                <a href="列表和元组.html">
+            
+                    
+                    4.列表和元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="字典和集合.html">
+            
+                <a href="字典和集合.html">
+            
+                    
+                    5.字典和集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="条件判断if.html">
+            
+                <a href="条件判断if.html">
+            
+                    
+                    6.条件判断if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="输入和输出.html">
+            
+                <a href="输入和输出.html">
+            
+                    
+                    7.输入和输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.8" data-path="循环.html">
+            
+                <a href="循环.html">
+            
+                    
+                    8.循环
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.8.1" data-path="生成式.html">
+            
+                <a href="生成式.html">
+            
+                    
+                    1.生成式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.2" data-path="生成器.html">
+            
+                <a href="生成器.html">
+            
+                    
+                    2.生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.3" data-path="可迭代对象&迭代器.html">
+            
+                <a href="可迭代对象&迭代器.html">
+            
+                    
+                    3.可迭代对象&迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    9.函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    10.异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.1" data-path="自定义异常.html">
+            
+                <a href="自定义异常.html">
+            
+                    
+                    1.自定义异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="文件处理.html">
+            
+                <a href="文件处理.html">
+            
+                    
+                    11.文件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="模块.html">
+            
+                <a href="模块.html">
+            
+                    
+                    三.模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="理解Python模块.html">
+            
+                <a href="理解Python模块.html">
+            
+                    
+                    1.理解Python模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2.标准库模块使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="os模块.html">
+            
+                <a href="os模块.html">
+            
+                    
+                    1.os模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="sys模块.html">
+            
+                <a href="sys模块.html">
+            
+                    
+                    2.sys模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="re正则表达式.html">
+            
+                <a href="re正则表达式.html">
+            
+                    
+                    3.re正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="时间处理.html">
+            
+                <a href="时间处理.html">
+            
+                    
+                    4.时间处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.5" data-path="简单加密算法.html">
+            
+                <a href="简单加密算法.html">
+            
+                    
+                    5.简单加密算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.6" data-path="网络请求.html">
+            
+                <a href="网络请求.html">
+            
+                    
+                    6.网络请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3.第三方库使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    1.requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="tkinter.html">
+            
+                <a href="tkinter.html">
+            
+                    
+                    2.tkinter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    4.自建库给他人使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="自建库.html">
+            
+                <a href="自建库.html">
+            
+                    
+                    1.自建库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="pypi服务器.html">
+            
+                <a href="pypi服务器.html">
+            
+                    
+                    2.pypi服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="打包并上传pypi.html">
+            
+                <a href="打包并上传pypi.html">
+            
+                    
+                    3.打包并上传pypi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >8.循环</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5FAA;&#x73AF;&#x8BED;&#x53E5;">&#x5FAA;&#x73AF;&#x8BED;&#x53E5;</h1>
+<h2 id="for&#x5FAA;&#x73AF;">for&#x5FAA;&#x73AF;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):  
+    print(i)
+</code></pre>
+<h2 id="while&#x5FAA;&#x73AF;">while&#x5FAA;&#x73AF;</h2>
+<pre><code class="lang-python">count = <span class="hljs-number">0</span>
+<span class="hljs-keyword">while</span> (count &lt; <span class="hljs-number">9</span>):
+   <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;The count is:&apos;</span>, count
+   count = count + <span class="hljs-number">1</span>
+<span class="hljs-keyword">print</span> <span class="hljs-string">&quot;Over!&quot;</span>
+</code></pre>
+<h2 id="&#x5FAA;&#x73AF;&#x5D4C;&#x5957;">&#x5FAA;&#x73AF;&#x5D4C;&#x5957;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+&#x5224;&#x65AD;&#x7D20;&#x6570;&#x4F8B;&#x5B50;
+&quot;&quot;&quot;</span>
+i = <span class="hljs-number">2</span>
+<span class="hljs-keyword">while</span>(i &lt; <span class="hljs-number">100</span>):
+   j = <span class="hljs-number">2</span>
+   <span class="hljs-keyword">while</span>(j &lt;= (i/j)):
+      <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span>(i%j): 
+        <span class="hljs-keyword">break</span>
+      j = j + <span class="hljs-number">1</span>
+   <span class="hljs-keyword">if</span> (j &gt; i/j) : <span class="hljs-keyword">print</span> i, <span class="hljs-string">&quot; &#x662F;&#x7D20;&#x6570;&quot;</span>
+   i = i + <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">print</span> <span class="hljs-string">&quot;Over!&quot;</span>
+</code></pre>
+<h1 id="&#x5FAA;&#x73AF;&#x63A7;&#x5236;">&#x5FAA;&#x73AF;&#x63A7;&#x5236;</h1>
+<h2 id="break">break</h2>
+<p>&#x7EC8;&#x6B62;&#x5E76;&#x8DF3;&#x51FA;&#x6574;&#x4E2A;&#x5FAA;&#x73AF;</p>
+<h2 id="continue">continue</h2>
+<p>&#x8DF3;&#x51FA;&#x5F53;&#x524D;&#x5FAA;&#x5FAA;&#x73AF;, &#x5E76;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;</p>
+<h2 id="pass">pass</h2>
+<p>&#x65E0;&#x7279;&#x522B;&#x610F;&#x4E49;, &#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#x7684;&#x5B8C;&#x6574;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="输入和输出.html" class="navigation navigation-prev " aria-label="Previous page: 7.输入和输出">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="生成式.html" class="navigation navigation-next " aria-label="Next page: 1.生成式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8.循环","level":"2.1.8","depth":2,"next":{"title":"1.生成式","level":"2.1.8.1","depth":3,"path":"生成式.md","ref":"生成式.md","articles":[]},"previous":{"title":"7.输入和输出","level":"2.1.7","depth":2,"path":"输入和输出.md","ref":"输入和输出.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"循环.md","mtime":"2018-06-24T03:24:28.220Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-24T03:36:09.205Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
