@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1.理解Python模块 · GitBook</title>
+        <title>10.异常处理 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="./" />
+    <link rel="next" href="自定义异常.html" />
     
     
-    <link rel="prev" href="模块.html" />
+    <link rel="prev" href="函数.html" />
     
 
     </head>
@@ -382,7 +382,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.10" data-path="异常处理.html">
+        <li class="chapter active" data-level="2.1.10" data-path="异常处理.html">
             
                 <a href="异常处理.html">
             
@@ -446,7 +446,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.2.1" data-path="理解Python模块.html">
+        <li class="chapter " data-level="2.2.1" data-path="理解Python模块.html">
             
                 <a href="理解Python模块.html">
             
@@ -804,7 +804,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >1.理解Python模块</a>
+        <a href="." >10.异常处理</a>
     </h1>
 </div>
 
@@ -819,96 +819,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7406;&#x89E3;python&#x6A21;&#x5757;">&#x7406;&#x89E3;Python&#x6A21;&#x5757;</h1>
-<h2 id="&#x4E00;&#x4E2A;python&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x5757;">&#x4E00;&#x4E2A;Python&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x5757;</h2>
-<blockquote>
-<p>&#x9700;&#x6C42;:  &#x8F93;&#x5165;&#x4E00;&#x4E32;&#x5B57;&#x7B26;, &#x5206;&#x522B;&#x7EDF;&#x8BA1;&#x51FA;&#x5176;&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;,&#x7A7A;&#x683C;,&#x6570;&#x5B57;&#x548C;&#x5176;&#x5B83;&#x5B57;&#x7B26;&#x7684;&#x4E2A;&#x6570;</p>
-</blockquote>
-<p>isalpha&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x5B57;&#x6BCD;
-isspace&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x7A7A;&#x683C;
-isdigit&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x5B57;</p>
-<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">junger</span><span class="hljs-params">(string)</span>:</span>
-    <span class="hljs-string">&quot;&quot;&quot;
-    &#x5224;&#x65AD;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x3001;&#x7A7A;&#x683C;&#x3001;&#x6570;&#x5B57;&#x548C;&#x5176;&#x5B83;&#x5B57;&#x7B26;&#x7684;&#x4E2A;&#x6570;
-    &quot;&quot;&quot;</span>
-    alpha = <span class="hljs-number">0</span>
-    space = <span class="hljs-number">0</span>
-    digit = <span class="hljs-number">0</span>
-    other = <span class="hljs-number">0</span>
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> string:
-        <span class="hljs-keyword">if</span> i.isalpha():
-            alpha += <span class="hljs-number">1</span>
-        <span class="hljs-keyword">elif</span> i.isspace():
-            space+=<span class="hljs-number">1</span>
-        <span class="hljs-keyword">elif</span> i.isdigit():           
-            digit+=<span class="hljs-number">1</span>
-        <span class="hljs-keyword">else</span>:
-            other+=<span class="hljs-number">1</span>
-    print(<span class="hljs-string">&quot;&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6570;&#x91CF;:{}&quot;</span>.format(alpha))
-    print(<span class="hljs-string">&quot;&#x7A7A;&#x683C;&#x6570;&#x91CF;:{}&quot;</span>.format(space))
-    print(<span class="hljs-string">&quot;&#x6570;&#x5B57;&#x6570;&#x91CF;:{}&quot;</span>.format(digit))
-    print(<span class="hljs-string">&quot;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x6570;&#x91CF;:{}&quot;</span>.format(other))
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
-
-<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
-    <span class="hljs-comment">#string = input(&quot;&#x8BF7;&#x8F93;&#x5165;&#x5F85;&#x5206;&#x6790;&#x7684;&#x5B57;&#x7B26;&#x4E32;:\n&quot;)</span>
-    string = raw_input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x5F85;&#x5206;&#x6790;&#x7684;&#x5B57;&#x7B26;&#x4E32;:\n&quot;</span>)
-    junger(string)
+                                <h1 id="&#x5F02;&#x5E38;&#x5904;&#x7406;">&#x5F02;&#x5E38;&#x5904;&#x7406;</h1>
+<p>&#x6765;&#x81EA;<a href="https://coolshell.cn/haoel" target="_blank">&#x5DE6;&#x8033;&#x6735;&#x8017;&#x5B50;&#x8001;&#x5E08;&#x7684;&#x4E13;&#x680F;</a>, &#x6709;&#x7EC6;&#x5FAE;&#x8C03;&#x6574;;</p>
+<h2 id="&#x5F02;&#x5E38;&#x6355;&#x6349;">&#x5F02;&#x5E38;&#x6355;&#x6349;</h2>
+<p>&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E0D;&#x671F;&#x671B;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x60C5;</p>
+<h2 id="&#x9519;&#x8BEF;&#x7801;">&#x9519;&#x8BEF;&#x7801;</h2>
+<p>&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x60C5;</p>
+<h1 id="&#x603B;&#x7ED3;&#x5EFA;&#x8BAE;">&#x603B;&#x7ED3;&#x5EFA;&#x8BAE;</h1>
+<h2 id="1&#x7EDF;&#x4E00;&#x7684;&#x9519;&#x8BEF;&#x5B57;&#x5178;">1.&#x7EDF;&#x4E00;&#x7684;&#x9519;&#x8BEF;&#x5B57;&#x5178;</h2>
+<p>&#x65E0;&#x8BBA;&#x4F7F;&#x7528;<code>&#x9519;&#x8BEF;&#x7801;</code>&#x8FD8;&#x662F;<code>&#x5F02;&#x5E38;&#x6355;&#x6349;</code>, &#x90FD;&#x9700;&#x8981;&#x8BA4;&#x771F;&#x5E76;&#x7EDF;&#x4E00;&#x7684;&#x505A;&#x597D;&#x9519;&#x8BEF;&#x7684;&#x5206;&#x7C7B;, &#x6700;&#x597D;&#x5B9A;&#x4E49;&#x5728;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;;</p>
+<h2 id="2&#x540C;&#x7C7B;&#x9519;&#x8BEF;&#x7684;&#x5B9A;&#x4E49;&#x6700;&#x597D;&#x662F;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x7684;">2.&#x540C;&#x7C7B;&#x9519;&#x8BEF;&#x7684;&#x5B9A;&#x4E49;&#x6700;&#x597D;&#x662F;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x7684;</h2>
+<p>&#x901A;&#x8FC7;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x548C;&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;, &#x6765;&#x7EDF;&#x4E00;&#x5B9A;&#x4E49;&#x540C;&#x7C7B;&#x9519;&#x8BEF;, &#x5E76;&#x6269;&#x5C55;&#x7279;&#x6B8A;&#x7684;&#x9519;&#x8BEF;, &#x63D0;&#x9AD8;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x7528;&#x5EA6;;</p>
+<h2 id="3&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x7684;&#x4E25;&#x91CD;&#x7A0B;&#x5EA6;">3.&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x7684;&#x4E25;&#x91CD;&#x7A0B;&#x5EA6;</h2>
+<pre><code class="lang-python">debug(<span class="hljs-string">&apos;&#x4E00;&#x4E2A;debug&#x4FE1;&#x606F;&apos;</span>)
+info(<span class="hljs-string">&apos;&#x4E00;&#x4E2A;info&#x4FE1;&#x606F;&apos;</span>)
+warn(yellow(<span class="hljs-string">&apos;&#x4E00;&#x4E2A;warning&#x4FE1;&#x606F;&apos;</span>))
+error(red(<span class="hljs-string">&apos;&#x4E00;&#x4E2A;error&#x4FE1;&#x606F;&apos;</span>))
+critical(red(<span class="hljs-string">&apos;&#x4E00;&#x4E2A;&#x81F4;&#x547D;critical&#x4FE1;&#x606F;&apos;</span>))
 </code></pre>
-<h2 id="&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;">&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;</h2>
-<blockquote>
-<p>if <strong>name</strong>==&#x201C;<strong>main</strong>&#x201D;:  &#x542B;&#x4E49;&#x5C31;&#x662F;, &#x5F53;Python&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;, &#x6267;&#x884C;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x4E0B;&#x7684;&#x8BED;&#x53E5;, &#x53EF;&#x4EE5;&#x770B;&#x505A;&#x662F; <strong>Python&#x6587;&#x4EF6;&#x4F5C;&#x4E3A;&#x811A;&#x672C;&#x6267;&#x884C;&#x5165;&#x53E3;</strong>  </p>
-</blockquote>
-<pre><code class="lang-shell">&#x279C;  ~ python junger.py
-&#x8BF7;&#x8F93;&#x5165;&#x5F85;&#x5206;&#x6790;&#x7684;&#x5B57;&#x7B26;&#x4E32;:
-my name is will!
-&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6570;&#x91CF;:12
-&#x7A7A;&#x683C;&#x6570;&#x91CF;:3
-&#x6570;&#x5B57;&#x6570;&#x91CF;:0
-&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x6570;&#x91CF;:1
+<h2 id="4&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x7684;&#x8F93;&#x51FA;&#x6700;&#x597D;&#x4F7F;&#x7528;&#x9519;&#x8BEF;&#x7801;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x7684;&#x65B9;&#x5F0F;">4.&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x7684;&#x8F93;&#x51FA;&#x6700;&#x597D;&#x4F7F;&#x7528;&#x9519;&#x8BEF;&#x7801;+&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x7684;&#x65B9;&#x5F0F;</h2>
+<p>&#x4F8B;&#x5982;: http 404, &#x53EF;&#x4EE5;&#x8FD4;&#x56DE;PageNotFound</p>
+<h2 id="5&#x5FFD;&#x7565;&#x9519;&#x8BEF;&#x6700;&#x597D;&#x6709;&#x65E5;&#x5FD7;">5.&#x5FFD;&#x7565;&#x9519;&#x8BEF;&#x6700;&#x597D;&#x6709;&#x65E5;&#x5FD7;</h2>
+<p>&#x4E0D;&#x7136;&#x7EF4;&#x62A4;&#x8D77;&#x6765;&#x5F88;&#x9EBB;&#x70E6;</p>
+<h2 id="6&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x4E0D;&#x505C;&#x7684;&#x62A5;&#x9519;&#x6700;&#x597D;&#x4E0D;&#x8981;&#x90FD;&#x6253;&#x5230;&#x65E5;&#x5FD7;">6.&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x4E0D;&#x505C;&#x7684;&#x62A5;&#x9519;,&#x6700;&#x597D;&#x4E0D;&#x8981;&#x90FD;&#x6253;&#x5230;&#x65E5;&#x5FD7;</h2>
+<p>&#x4FDD;&#x7559;&#x4E00;&#x6761;, &#x5E76;&#x8BB0;&#x5F55;&#x540C;&#x6837;&#x9519;&#x8BEF;&#x7684;&#x6B21;&#x6570;</p>
+<h2 id="7&#x4E0D;&#x8981;&#x7528;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x903B;&#x8F91;&#x6765;&#x5904;&#x7406;&#x4E1A;&#x52A1;&#x903B;&#x8F91;">7.&#x4E0D;&#x8981;&#x7528;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x903B;&#x8F91;&#x6765;&#x5904;&#x7406;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</h2>
+<p>&#x4F8B;&#x5982;: &#x53EF;&#x4EE5;&#x7528;&#x903B;&#x8F91;&#x5224;&#x65AD;&#x7684;&#x5730;&#x65B9;&#x5C31;&#x4E0D;&#x8981;&#x7528;&#x9519;&#x8BEF;&#x5904;&#x7406;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> expression: 
+    do_somthing()
+<span class="hljs-keyword">else</span>:
+    do_otherthing();
 </code></pre>
-<h2 id="&#x4F5C;&#x4E3A;&#x6A21;&#x5757;&#x5BFC;&#x5165;">&#x4F5C;&#x4E3A;&#x6A21;&#x5757;&#x5BFC;&#x5165;</h2>
-<blockquote>
-<p>&#x6211;&#x4EEC;&#x628A;&#x811A;&#x672C;&#x653E;&#x5230;&#x4EFB;&#x610F;&#x76EE;&#x5F55;&#x4E0B;, &#x547D;&#x540D;&#x4E3A;junger.py, &#x7136;&#x540E;, &#x5728;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x76EE;&#x5F55;&#x6267;&#x884C;ipython, &#x8FDB;&#x5165;&#x4EA4;&#x4E92;&#x89E3;&#x91CA;&#x5668;&#x73AF;&#x5883;;<br>&#x6B64;&#x65F6;, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; import &#x7684;&#x65B9;&#x5F0F;, &#x5C06;Python&#x4EE3;&#x7801;&#x505A;&#x4E3A;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x5BFC;&#x5165;&#x8FDB;&#x6765;, &#x76F4;&#x63A5;&#x5F53;&#x6210;&#x51FD;&#x6570;&#x6765;&#x4F7F;&#x7528;;  </p>
-</blockquote>
-<pre><code class="lang-python">In [<span class="hljs-number">4</span>]: <span class="hljs-keyword">from</span> junger <span class="hljs-keyword">import</span> junger
-
-In [<span class="hljs-number">5</span>]: junger(<span class="hljs-string">&quot;my name is will!&quot;</span>)
-&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6570;&#x91CF;:<span class="hljs-number">12</span>
-&#x7A7A;&#x683C;&#x6570;&#x91CF;:<span class="hljs-number">3</span>
-&#x6570;&#x5B57;&#x6570;&#x91CF;:<span class="hljs-number">0</span>
-&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x6570;&#x91CF;:<span class="hljs-number">1</span>
+<h2 id="8&#x5BF9;&#x7528;&#x540C;&#x7C7B;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;-&#x7528;&#x4E00;&#x6837;&#x7684;&#x6A21;&#x5F0F;">8.&#x5BF9;&#x7528;&#x540C;&#x7C7B;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;, &#x7528;&#x4E00;&#x6837;&#x7684;&#x6A21;&#x5F0F;</h2>
+<h2 id="9&#x5C3D;&#x53EF;&#x80FD;&#x5728;&#x9519;&#x8BEF;&#x53D1;&#x751F;&#x7684;&#x5730;&#x65B9;&#x5904;&#x7406;&#x9519;&#x8BEF;">9.&#x5C3D;&#x53EF;&#x80FD;&#x5728;&#x9519;&#x8BEF;&#x53D1;&#x751F;&#x7684;&#x5730;&#x65B9;&#x5904;&#x7406;&#x9519;&#x8BEF;</h2>
+<h2 id="10&#x5411;&#x4E0A;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x8FD4;&#x56DE;&#x539F;&#x59CB;&#x9519;&#x8BEF;">10.&#x5411;&#x4E0A;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x8FD4;&#x56DE;&#x539F;&#x59CB;&#x9519;&#x8BEF;</h2>
+<h2 id="11&#x5904;&#x7406;&#x9519;&#x8BEF;&#x65F6;-&#x603B;&#x8981;&#x6E05;&#x7406;&#x5DF2;&#x5206;&#x914D;&#x7684;&#x8D44;&#x6E90;">11.&#x5904;&#x7406;&#x9519;&#x8BEF;&#x65F6;, &#x603B;&#x8981;&#x6E05;&#x7406;&#x5DF2;&#x5206;&#x914D;&#x7684;&#x8D44;&#x6E90;</h2>
+<h2 id="12&#x4E0D;&#x63A8;&#x8350;&#x5728;&#x5FAA;&#x73AF;&#x4F53;&#x91CC;&#x5904;&#x7406;&#x9519;&#x8BEF;">12.&#x4E0D;&#x63A8;&#x8350;&#x5728;&#x5FAA;&#x73AF;&#x4F53;&#x91CC;&#x5904;&#x7406;&#x9519;&#x8BEF;</h2>
+<h2 id="13&#x4E0D;&#x8981;&#x628A;&#x5927;&#x91CF;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x653E;&#x5728;&#x4E00;&#x4E2A;try&#x8BED;&#x53E5;&#x5757;&#x5185;">13.&#x4E0D;&#x8981;&#x628A;&#x5927;&#x91CF;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x653E;&#x5728;&#x4E00;&#x4E2A;Try&#x8BED;&#x53E5;&#x5757;&#x5185;</h2>
+<p>&#x4E00;&#x4E2A;Try&#x8BED;&#x53E5;&#x5757;&#x5185;&#x7684;&#x8BED;&#x53E5;&#x5E94;&#x8BE5;&#x662F;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4E8B;&#x60C5;</p>
+<h2 id="14&#x4E3A;&#x4F60;&#x7684;&#x9519;&#x8BEF;&#x5B9A;&#x4E49;&#x63D0;&#x4F9B;&#x6E05;&#x695A;&#x7684;&#x6587;&#x6863;&#x4EE5;&#x53CA;&#x6BCF;&#x79CD;&#x9519;&#x8BEF;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;">14.&#x4E3A;&#x4F60;&#x7684;&#x9519;&#x8BEF;&#x5B9A;&#x4E49;&#x63D0;&#x4F9B;&#x6E05;&#x695A;&#x7684;&#x6587;&#x6863;&#x4EE5;&#x53CA;&#x6BCF;&#x79CD;&#x9519;&#x8BEF;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h2>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;RESTul API, &#x4F7F;&#x7528;Swagger&#x6765;&#x5E2E;&#x7EC4;&#x6211;&#x4EEC;&#x641E;&#x5B9A;&#x8FD9;&#x4E2A;&#x4E8B;&#x60C5;</p>
+<h2 id="15&#x5BF9;&#x4E8E;&#x5F02;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x63A8;&#x8350;&#x4F7F;&#x7528;promise&#x6A21;&#x5F0F;&#x5904;&#x7406;&#x9519;&#x8BEF;&#x7ECF;&#x5178;">15.&#x5BF9;&#x4E8E;&#x5F02;&#x6B65;&#x7684;&#x65B9;&#x5F0F;,&#x63A8;&#x8350;&#x4F7F;&#x7528;Promise&#x6A21;&#x5F0F;&#x5904;&#x7406;&#x9519;&#x8BEF;(&#x7ECF;&#x5178;)</h2>
+<p>JavaScript&#x6709;&#x5F88;&#x597D;&#x7684;&#x5B9E;&#x8DF5;. &#x53E6;&#x5916;&#x5728;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;, &#x63A5;&#x53E3;&#x90FD;&#x662F;&#x5F02;&#x6B65;&#x7684;, &#x4F46;&#x662F;, &#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x6709;&#x4E9B;&#x64CD;&#x4F5C;&#x53C8;&#x6709;&#x4E0A;&#x4E0B;&#x6587;&#x4F9D;&#x8D56;, &#x53EF;&#x4EE5;&#x4F7F;&#x7528;Promise&#x7684;&#x65B9;&#x5F0F;&#x6765;<code>&#x94FE;&#x5F0F;&#x8C03;&#x7528;</code>&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;, &#x5E76;&#x8FDB;&#x884C;&#x5F02;&#x5E38;&#x5904;&#x7406;;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x53D1;&#x5E03;&#x5185;&#x5BB9;&#x5B89;&#x5168;&#x5BA1;&#x6838;&#x4F8B;&#x5B50;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> wxContentSafe = ({content}) =&gt; {
+    <span class="hljs-keyword">let</span> data = {<span class="hljs-string">&quot;content&quot;</span>: content}
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+        myhttp({
+            uri: <span class="hljs-string">&apos;/wx_content_safe/&apos;</span>,
+            data: {
+                data
+            },
+            method: <span class="hljs-string">&apos;POST&apos;</span>,
+        }).then(res =&gt; {
+            <span class="hljs-keyword">if</span> (res.errcode) {
+                reject()
+            } <span class="hljs-keyword">else</span> {
+                resolve()
+            }
+        }).catch(reject)
+    })
+}
 </code></pre>
-<h2 id="&#x5305;&#x542B;initpy&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E5F;&#x88AB;&#x770B;&#x6210;&#x4E00;&#x4E2A;python&#x6A21;&#x5757;">&#x5305;&#x542B;<strong>init</strong>.py&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E5F;&#x88AB;&#x770B;&#x6210;&#x4E00;&#x4E2A;python&#x6A21;&#x5757;</h2>
-<blockquote>
-<p><strong>init</strong>.py&#x662F;&#x521D;&#x59CB;&#x5316;&#x6587;&#x4EF6;, &#x91CC;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5316;&#x7684;&#x4EE3;&#x7801;, &#x5BFC;&#x5165;&#x6A21;&#x5757;&#x5185;&#x5BB9;&#x524D;&#x4F1A;&#x6267;&#x884C;<strong>init</strong>.py&#x6587;&#x4EF6;&#x4EE3;&#x7801;</p>
-</blockquote>
-<pre><code class="lang-shell">&#x279C;  ~ mkdir test_package
-&#x279C;  ~ mv junger.py test_package
-&#x279C;  ~ cd test_package
-&#x279C;  test_package touch __init__.py
-&#x279C;  test_package vim __init__.py
-&#x279C;  test_package
-&#x279C;  test_package cat __init__.py
-print(&quot;__init__&quot;)
-&#x279C;  test_package ls
-__init__.py junger.py
-&#x279C;  test_package cd ..
-&#x279C;  ~ ipython
-Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 05:52:31)
-Type &apos;copyright&apos;, &apos;credits&apos; or &apos;license&apos; for more information
-IPython 6.4.0 -- An enhanced Interactive Python. Type &apos;?&apos; for help.
-
-__init__
-In [1]: from test_package.junger import  junger
-
-In [2]: junger(&quot;my name is will!&quot;)
-&#x4E2D;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6570;&#x91CF;:12
-&#x7A7A;&#x683C;&#x6570;&#x91CF;:3
-&#x6570;&#x5B57;&#x6570;&#x91CF;:0
-&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x6570;&#x91CF;:1
-</code></pre>
+<h2 id="16&#x5BF9;&#x4E8E;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;-&#x63A8;&#x8350;&#x4F7F;&#x7528;apm&#x76F8;&#x5173;&#x8F6F;&#x4EF6;&#x5C24;&#x5176;&#x662F;&#x4F7F;&#x7528;zipkin&#x8FD9;&#x6837;&#x7684;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x8DDF;&#x8E2A;&#x7684;&#x5206;&#x6790;&#x6765;&#x5173;&#x8054;&#x9519;&#x8BEF;">16.&#x5BF9;&#x4E8E;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;, &#x63A8;&#x8350;&#x4F7F;&#x7528;APM&#x76F8;&#x5173;&#x8F6F;&#x4EF6;.&#x5C24;&#x5176;&#x662F;&#x4F7F;&#x7528;Zipkin&#x8FD9;&#x6837;&#x7684;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x8DDF;&#x8E2A;&#x7684;&#x5206;&#x6790;&#x6765;&#x5173;&#x8054;&#x9519;&#x8BEF;</h2>
 
                                 
                                 </section>
@@ -936,12 +909,12 @@ In [2]: junger(&quot;my name is will!&quot;)
 
             
                 
-                <a href="模块.html" class="navigation navigation-prev " aria-label="Previous page: 3.模块">
+                <a href="函数.html" class="navigation navigation-prev " aria-label="Previous page: 9.函数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="./" class="navigation navigation-next " aria-label="Next page: 2.标准库模块使用">
+                <a href="自定义异常.html" class="navigation navigation-next " aria-label="Next page: 1.自定义异常">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -952,7 +925,7 @@ In [2]: junger(&quot;my name is will!&quot;)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.理解Python模块","level":"2.2.1","depth":2,"next":{"title":"2.标准库模块使用","level":"2.2.2","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.os模块","level":"2.2.2.1","depth":3,"path":"os模块.md","ref":"os模块.md","articles":[]},{"title":"2.sys模块","level":"2.2.2.2","depth":3,"path":"sys模块.md","ref":"sys模块.md","articles":[]},{"title":"3.re正则表达式","level":"2.2.2.3","depth":3,"path":"re正则表达式.md","ref":"re正则表达式.md","articles":[]},{"title":"4.时间处理","level":"2.2.2.4","depth":3,"path":"时间处理.md","ref":"时间处理.md","articles":[]},{"title":"5.简单加密算法","level":"2.2.2.5","depth":3,"path":"简单加密算法.md","ref":"简单加密算法.md","articles":[]},{"title":"6.网络请求","level":"2.2.2.6","depth":3,"path":"网络请求.md","ref":"网络请求.md","articles":[]}]},"previous":{"title":"3.模块","level":"2.2","depth":1,"path":"模块.md","ref":"模块.md","articles":[{"title":"1.理解Python模块","level":"2.2.1","depth":2,"path":"理解Python模块.md","ref":"理解Python模块.md","articles":[]},{"title":"2.标准库模块使用","level":"2.2.2","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.os模块","level":"2.2.2.1","depth":3,"path":"os模块.md","ref":"os模块.md","articles":[]},{"title":"2.sys模块","level":"2.2.2.2","depth":3,"path":"sys模块.md","ref":"sys模块.md","articles":[]},{"title":"3.re正则表达式","level":"2.2.2.3","depth":3,"path":"re正则表达式.md","ref":"re正则表达式.md","articles":[]},{"title":"4.时间处理","level":"2.2.2.4","depth":3,"path":"时间处理.md","ref":"时间处理.md","articles":[]},{"title":"5.简单加密算法","level":"2.2.2.5","depth":3,"path":"简单加密算法.md","ref":"简单加密算法.md","articles":[]},{"title":"6.网络请求","level":"2.2.2.6","depth":3,"path":"网络请求.md","ref":"网络请求.md","articles":[]}]},{"title":"3.第三方库使用","level":"2.2.3","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.requests","level":"2.2.3.1","depth":3,"path":"requests.md","ref":"requests.md","articles":[]},{"title":"2.tkinter","level":"2.2.3.2","depth":3,"path":"tkinter.md","ref":"tkinter.md","articles":[]}]},{"title":"4.自建库给他人使用","level":"2.2.4","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"1.自建库","level":"2.2.4.1","depth":3,"path":"自建库.md","ref":"自建库.md","articles":[]},{"title":"2.pypi服务器","level":"2.2.4.2","depth":3,"path":"pypi服务器.md","ref":"pypi服务器.md","articles":[]},{"title":"3.打包并上传pypi","level":"2.2.4.3","depth":3,"path":"打包并上传pypi.md","ref":"打包并上传pypi.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"理解Python模块.md","mtime":"2018-06-24T03:24:28.229Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T14:21:08.969Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10.异常处理","level":"2.1.10","depth":2,"next":{"title":"1.自定义异常","level":"2.1.10.1","depth":3,"path":"自定义异常.md","ref":"自定义异常.md","articles":[]},"previous":{"title":"9.函数","level":"2.1.9","depth":2,"path":"函数.md","ref":"函数.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"异常处理.md","mtime":"2018-06-25T14:15:29.754Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T14:21:08.969Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
