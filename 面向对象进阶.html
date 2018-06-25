@@ -1,0 +1,1861 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.面向对象进阶 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="魔法方法.md" />
+    
+    
+    <link rel="prev" href="面向对象编程.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="简述.html">
+            
+                <a href="简述.html">
+            
+                    
+                    1.简述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="为什么使用python.html">
+            
+                <a href="为什么使用python.html">
+            
+                    
+                    1.为什么使用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="python安装.html">
+            
+                <a href="python安装.html">
+            
+                    
+                    2.python安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="python解释器.html">
+            
+                <a href="python解释器.html">
+            
+                    
+                    3.python解释器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="python交互环境.html">
+            
+                <a href="python交互环境.html">
+            
+                    
+                    4.python交互环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="python你怎么这么慢.html">
+            
+                <a href="python你怎么这么慢.html">
+            
+                    
+                    5.python你为什么这么慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="mac环境下使用pyenv进行Python的多版本管理.html">
+            
+                <a href="mac环境下使用pyenv进行Python的多版本管理.html">
+            
+                    
+                    6.mac环境下使用pyenv进行Python的多版本管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="使用虚拟环境隔离多个Python项目.html">
+            
+                <a href="使用虚拟环境隔离多个Python项目.html">
+            
+                    
+                    7.使用虚拟环境隔离多个python项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="语法.html">
+            
+                <a href="语法.html">
+            
+                    
+                    2.语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="缩进.html">
+            
+                <a href="缩进.html">
+            
+                    
+                    1.缩进
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="简单数据类型.html">
+            
+                <a href="简单数据类型.html">
+            
+                    
+                    2.简单数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="字符串编码.html">
+            
+                <a href="字符串编码.html">
+            
+                    
+                    3.字符串编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="列表和元组.html">
+            
+                <a href="列表和元组.html">
+            
+                    
+                    4.列表和元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="字典和集合.html">
+            
+                <a href="字典和集合.html">
+            
+                    
+                    5.字典和集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="条件判断if.html">
+            
+                <a href="条件判断if.html">
+            
+                    
+                    6.条件判断if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="输入和输出.html">
+            
+                <a href="输入和输出.html">
+            
+                    
+                    7.输入和输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="循环.html">
+            
+                <a href="循环.html">
+            
+                    
+                    8.循环
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.8.1" data-path="生成式.html">
+            
+                <a href="生成式.html">
+            
+                    
+                    1.生成式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.2" data-path="生成器.html">
+            
+                <a href="生成器.html">
+            
+                    
+                    2.生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.3" data-path="可迭代对象&迭代器.html">
+            
+                <a href="可迭代对象&迭代器.html">
+            
+                    
+                    3.可迭代对象&迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    9.函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="异常处理.html">
+            
+                <a href="异常处理.html">
+            
+                    
+                    10.异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.1" data-path="自定义异常.html">
+            
+                <a href="自定义异常.html">
+            
+                    
+                    1.自定义异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="文件处理.html">
+            
+                <a href="文件处理.html">
+            
+                    
+                    11.文件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="模块.html">
+            
+                <a href="模块.html">
+            
+                    
+                    3.模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="理解Python模块.html">
+            
+                <a href="理解Python模块.html">
+            
+                    
+                    1.理解Python模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2.标准库模块使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="os模块.html">
+            
+                <a href="os模块.html">
+            
+                    
+                    1.os模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="sys模块.html">
+            
+                <a href="sys模块.html">
+            
+                    
+                    2.sys模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="re正则表达式.html">
+            
+                <a href="re正则表达式.html">
+            
+                    
+                    3.re正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="时间处理.html">
+            
+                <a href="时间处理.html">
+            
+                    
+                    4.时间处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.5" data-path="简单加密算法.html">
+            
+                <a href="简单加密算法.html">
+            
+                    
+                    5.简单加密算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.6" data-path="网络请求.html">
+            
+                <a href="网络请求.html">
+            
+                    
+                    6.网络请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.7" data-path="日志记录.html">
+            
+                <a href="日志记录.html">
+            
+                    
+                    7.日志记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3.第三方库使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    1.requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="tkinter.html">
+            
+                <a href="tkinter.html">
+            
+                    
+                    2.tkinter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    4.自建库给他人使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="自建库.html">
+            
+                <a href="自建库.html">
+            
+                    
+                    1.自建库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="pypi服务器.html">
+            
+                <a href="pypi服务器.html">
+            
+                    
+                    2.pypi服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="打包并上传pypi.html">
+            
+                <a href="打包并上传pypi.html">
+            
+                    
+                    3.打包并上传pypi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="编程方式.html">
+            
+                <a href="编程方式.html">
+            
+                    
+                    4.编程方式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="函数式编程.html">
+            
+                <a href="函数式编程.html">
+            
+                    
+                    1.函数式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="面向对象编程.html">
+            
+                <a href="面向对象编程.html">
+            
+                    
+                    2.面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2.3" data-path="面向对象进阶.html">
+            
+                <a href="面向对象进阶.html">
+            
+                    
+                    3.面向对象进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="魔法方法.md">
+            
+                <span>
+            
+                    
+                    魔法方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Git与GitHub.md">
+            
+                <span>
+            
+                    
+                    Git与GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="设计模式.md">
+            
+                <span>
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="浅谈设计模式.html">
+            
+                <a href="浅谈设计模式.html">
+            
+                    
+                    1.浅谈设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="web前端基础.md">
+            
+                <span>
+            
+                    
+                    web前端基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="HTML+CSS.md">
+            
+                <span>
+            
+                    
+                    1.HTML+CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="JavaScript初级.md">
+            
+                <span>
+            
+                    
+                    2.JavaScript初级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" data-path="JQuery初级.md">
+            
+                <span>
+            
+                    
+                    3.JQuery初级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4" data-path="BootStrap初级.md">
+            
+                <span>
+            
+                    
+                    4.Bootstrap初级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.5" data-path="BootStrap实战.md">
+            
+                <span>
+            
+                    
+                    4.Bootstrap实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="Mysql基础.md">
+            
+                <span>
+            
+                    
+                    Mysql基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="web框架.md">
+            
+                <span>
+            
+                    
+                    web框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" data-path="IDE使用.md">
+            
+                <span>
+            
+                    
+                    IDE使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="Django基础.md">
+            
+                <span>
+            
+                    
+                    Django基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.3" data-path="Django进阶.md">
+            
+                <span>
+            
+                    
+                    Django进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.4" data-path="Ajax.md">
+            
+                <span>
+            
+                    
+                    Ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.5" data-path="Django实现个人Blog系统.md">
+            
+                <span>
+            
+                    
+                    Django实现个人Blog系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.6" data-path="Django最佳实践.md">
+            
+                <span>
+            
+                    
+                    Django最佳实践
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.6.1" data-path="Django最佳实践_cookiecutter生成模板项目.md">
+            
+                <span>
+            
+                    
+                    Django最佳实践_cookiecutter生成模板项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.6.2" data-path="Django最佳实践_REST Framwork.md">
+            
+                <span>
+            
+                    
+                    Django最佳实践_REST Framwork
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.6.3" data-path="Django最佳实践_redis缓存优化.md">
+            
+                <span>
+            
+                    
+                    Django最佳实践_redis缓存优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.6.4" data-path="Django最佳实践_sentry异常跟踪.md">
+            
+                <span>
+            
+                    
+                    Django最佳实践_sentry缓存优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.6.5" data-path="Django最佳实践_celery队列系统.md">
+            
+                <span>
+            
+                    
+                    Django最佳实践_celery队列系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.6.6" data-path="Django最佳实践_allauth第三方认证.md">
+            
+                <span>
+            
+                    
+                    Django最佳实践_allauth第三方认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="爬虫.md">
+            
+                <span>
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="基础项目.md">
+            
+                <span>
+            
+                    
+                    基础项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="网络编程.md">
+            
+                <span>
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="数据与计算.md">
+            
+                <span>
+            
+                    
+                    数据与计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="综合项目.md">
+            
+                <span>
+            
+                    
+                    综合项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >3.面向对象进阶</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8FDB;&#x9636;">&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8FDB;&#x9636;</h1>
+<h1 id="1-&#x7C7B;&#x7684;&#x5C5E;&#x6027;">1. &#x7C7B;&#x7684;&#x5C5E;&#x6027;</h1>
+<h2 id="11-&#x5C06;&#x65B9;&#x6CD5;&#x5305;&#x88C5;&#x6210;&#x5C5E;&#x6027;">1.1 &#x5C06;&#x65B9;&#x6CD5;&#x5305;&#x88C5;&#x6210;&#x5C5E;&#x6027;</h2>
+<h3 id="&#x65B9;&#x6CD5;1-&#x81EA;&#x5E26;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x7B26;property">&#x65B9;&#x6CD5;1: &#x81EA;&#x5E26;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x7B26;@property</h3>
+<p>&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x7B26;@property:&#x63CF;&#x8FF0;&#x7B26;&#x534F;&#x8BAE;&#x4E2D;&#x201C;&#x5B9A;&#x4E49;&#x4E86;<strong>get</strong>&#x201D;&#x3001;&#x201C;<strong>set</strong>&#x201D;&#x6216;&#x201D;<strong>delete</strong>&#x201D; &#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;
+&#x5B9E;&#x73B0;<strong>get</strong>&#x65B9;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x975E;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x5728;&#x521D;&#x59CB;&#x5316;&#x4E4B;&#x540E;&#x5B83;&#x4EEC;&#x53EA;&#x80FD;&#x88AB;&#x8BFB;&#x53D6;&#xFF1B;
+&#x800C;&#x540C;&#x65F6;&#x5B9E;&#x73B0;<strong>get</strong>&#x548C;<strong>set</strong>&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x79CD;&#x5C5E;&#x6027;&#x662F;&#x53EF;&#x5199;&#x7684;&#xFF1B;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+File Name: &#x5C06;&#x65B9;&#x6CD5;&#x5305;&#x88C5;&#x6210;&#x5C5E;&#x6027;.py
+&quot;&quot;&quot;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Washer</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,water=<span class="hljs-number">10</span>,scour=<span class="hljs-number">2</span>)</span>:</span>
+        self._water = water
+        self.scour = scour
+        self.year = <span class="hljs-number">2010</span>
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-comment">#&#x5C5E;&#x6027;&#x5305;&#x88C5;:&#x5C06;&#x65B9;&#x6CD5;&#x5305;&#x88C5;&#x6210;&#x5C5E;&#x6027;&#xFF0C;&#x4EE5;&#x9690;&#x85CF;&#x76F8;&#x5173;&#x5B9E;&#x73B0;</span>
+    <span class="hljs-comment">#&#x53EF;&#x8BFB;&#xFF1A;@property</span>
+    <span class="hljs-comment">#&#x53EF;&#x5199;&#xFF1A;@&lt;property-name&gt;.setter</span>
+    <span class="hljs-comment">#&#x53EF;&#x5220;&#xFF1A;@&lt;property-name&gt;.deleter</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">water</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self._water
+
+<span class="hljs-meta">    @water.setter</span>
+    <span class="hljs-comment">#&#x7528;&#x4E8E;&#x8BBE;&#x5B9A;&#x5C5E;&#x6027;&#x7684;&#x8303;&#x56F4;, &#x53EF;&#x5199;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">water</span><span class="hljs-params">(self,water)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt; water &lt;=<span class="hljs-number">500</span>:
+            self._water = water
+        <span class="hljs-keyword">else</span>:
+            print(<span class="hljs-string">&quot;set Failure!&quot;</span>)
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">total_year</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">2015</span> - self.year
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_water</span><span class="hljs-params">(self,water)</span>:</span>
+        self.water = water
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_scour</span><span class="hljs-params">(self,scour)</span>:</span>
+        self.scour = scour
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_water</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;Add water:&apos;</span>,self.water)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_scour</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;Add scour:&apos;</span>,self.scour)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_wash</span><span class="hljs-params">(self)</span>:</span>
+        self.add_water()
+        self.add_scour()
+        print(<span class="hljs-string">&apos;Start wash...&apos;</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    w = Washer()
+    <span class="hljs-comment"># &#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x79C1;&#x6709;&#x5C5E;&#x6027;_water,&#x79C1;&#x6709;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x53EA;&#x6709;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x80FD;&#x8C03;&#x7528;,&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5185;&#x90E8;&#x65B9;&#x6CD5;&#x53BB;&#x8C03;&#x7528;&#x79C1;&#x6709;&#x5C5E;&#x6027;;</span>
+    <span class="hljs-comment"># &#x63A5;&#x7740;&#x6211;&#x4EEC;&#x5BF9;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5C5E;&#x6027;&#x5C01;&#x88C5;,&#x4F7F;&#x65B9;&#x6CD5;&#x5BF9;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#x548C;&#x5C5E;&#x6027;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#x4E00;&#x6837;;</span>
+    <span class="hljs-comment"># &#x5C5E;&#x6027;&#x5305;&#x88C5;&#x5206;&#x4E3A;&#x8BFB;&#x5199;&#x5220; 3&#x4E2D;&#x6A21;&#x5F0F;,&#x9700;&#x8981;&#x5206;&#x522B;&#x5B9A;&#x4E49;;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x6211;&#x4EEC;&#x80FD;&#x5BF9;&#x5C5E;&#x6027;&#x503C;&#x505A;&#x5224;&#x65AD;&#x6216;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;;</span>
+    print(w.water)
+    w.water = <span class="hljs-number">-123</span>
+    print(w.water)
+    print(w.total_year)
+</code></pre>
+<h3 id="&#x65B9;&#x6CD5;2-&#x81EA;&#x5B9A;&#x4E49;&#x63CF;&#x8FF0;&#x7B26;&#x7C7B;">&#x65B9;&#x6CD5;2. &#x81EA;&#x5B9A;&#x4E49;&#x63CF;&#x8FF0;&#x7B26;&#x7C7B;</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+&#x81EA;&#x5B9A;&#x4E49;&#x63CF;&#x8FF0;&#x7B26;&#x7C7B;, &#x5B9A;&#x4E49;__get__, __set__, __delete__&#x65B9;&#x6CD5;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x8BBE;&#x5B9A;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x64CD;&#x4F5C;
+&quot;&quot;&quot;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TypedProperty</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;python2.7 &#x5FC5;&#x987B;&#x662F;&#x65B0;&#x5F0F;&#x7C7B;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, type, default=None)</span>:</span>
+        self.name = <span class="hljs-string">&quot;_&quot;</span> + name
+        self.type = type
+        self.default = default <span class="hljs-keyword">if</span> default <span class="hljs-keyword">else</span> type()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__get__</span><span class="hljs-params">(self, instance, cls)</span>:</span>
+        <span class="hljs-keyword">print</span> cls,type(cls)
+        <span class="hljs-keyword">return</span> getattr(instance, self.name, self.default)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__set__</span><span class="hljs-params">(self,instance,value)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> isinstance(value,self.type):
+            <span class="hljs-keyword">raise</span> TypeError(<span class="hljs-string">&quot;Must be a %s&quot;</span> % self.type) 
+        setattr(instance,self.name,value)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__delete__</span><span class="hljs-params">(self,instance)</span>:</span>
+        <span class="hljs-comment">#&#x5141;&#x8BB8;&#x5220;&#x9664;</span>
+        <span class="hljs-comment">#del  self.name</span>
+        <span class="hljs-comment">#print &quot;&#x5DF2;&#x5220;&#x9664;self.name&quot;</span>
+        <span class="hljs-comment">#&#x4E0D;&#x5141;&#x8BB8;&#x5220;&#x9664;</span>
+        <span class="hljs-keyword">raise</span> AttributeError(<span class="hljs-string">&quot;Can&apos;t delete attribute&quot;</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-comment">#name = TypedProperty(&quot;name&quot;,str) </span>
+    <span class="hljs-comment">#num = TypedProperty(&quot;num&quot;,int,42)</span>
+
+    <span class="hljs-comment">#&#x82E5;&#x662F;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;,&#x5219;&#x4E0D;&#x80FD;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x63CF;&#x8FF0;&#x7B26;&#x53F7;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.name = TypedProperty(<span class="hljs-string">&quot;name&quot;</span>,str) 
+        self.num = TypedProperty(<span class="hljs-string">&quot;num&quot;</span>,int,<span class="hljs-number">42</span>)
+
+
+<span class="hljs-keyword">if</span> __name__==<span class="hljs-string">&quot;__main__&quot;</span>:
+    acct = Foo()
+    acct.name = <span class="hljs-string">&quot;daixiang&quot;</span>
+    acct.num = <span class="hljs-number">24</span>
+    <span class="hljs-keyword">print</span> acct.num
+    <span class="hljs-keyword">print</span> acct.name
+
+    acct.num = <span class="hljs-string">&quot;1234&quot;</span> <span class="hljs-comment">#&#x63D0;&#x793A;&#x5FC5;&#x987B;&#x4E3A;int&#x7C7B;&#x578B;</span>
+
+    <span class="hljs-comment">#del acct.num #&#x63D0;&#x793A;&#x65E0;&#x6CD5;&#x5220;&#x9664;</span>
+
+    <span class="hljs-comment">#del Foo.num #&#x53EF;&#x4EE5;&#x5220;&#x9664;</span>
+    <span class="hljs-comment">#print acct.num #&#x65E0;&#x6CD5;&#x627E;&#x5230;</span>
+
+    <span class="hljs-comment">#&#x5728;__delete__&#x65B9;&#x6CD5;&#x4E2D;&#x5141;&#x8BB8;&#x5220;&#x9664;&#x540E;</span>
+    <span class="hljs-comment">#del acct.num #&#x63D0;&#x793A;&#x5DF2;&#x5220;&#x9664;self.name </span>
+    <span class="hljs-comment">#print acct.num #&#x63D0;&#x793A;&#x6CA1;&#x6709;&#x8BE5;&#x5C5E;&#x6027;</span>
+</code></pre>
+<h3 id="&#x65B9;&#x6CD5;3-&#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x7B7E;&#x540D;">&#x65B9;&#x6CD5;3. &#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x7B7E;&#x540D;</h3>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x5FC5;&#x987B;&#x662F;&#x65B0;&#x5F0F;&#x7C7B;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, num)</span>:</span>
+        self._acct_num = num
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_acct_num</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&quot;get_acct_num&quot;</span>)
+        <span class="hljs-keyword">return</span> self._acct_num
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_acct_num</span><span class="hljs-params">(self, value)</span>:</span>
+        print(<span class="hljs-string">&quot;set_acct_num&quot;</span>)
+        self._acct_num = value
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">del_acct_num</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&quot;del_acct_num&quot;</span>)
+        <span class="hljs-comment">#del self._acct_num</span>
+        <span class="hljs-keyword">raise</span> AttrbuiteError(<span class="hljs-string">&quot;Can&apos;t delete attribute&quot;</span>)
+
+    acct_num = property(get_acct_num, set_acct_num, del_acct_num, <span class="hljs-string">&quot;Account number property.&quot;</span>)
+
+
+<span class="hljs-keyword">if</span> __name__==<span class="hljs-string">&quot;__main__&quot;</span>:
+    acc = Account(<span class="hljs-string">&quot;24&quot;</span>)
+    print(acc.acct_num)
+</code></pre>
+<h3 id="&#x65B9;&#x6CD5;4-&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x88C5;&#x9970;&#x5668;">&#x65B9;&#x6CD5;4. &#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x88C5;&#x9970;&#x5668;</h3>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x5FC5;&#x987B;&#x662F;&#x65B0;&#x5F0F;&#x7C7B;&quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, x)</span>:</span>
+        self._x = x
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">x</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self._x
+
+<span class="hljs-meta">    @x.setter</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">x</span><span class="hljs-params">(self, value)</span>:</span>
+        self._x = value
+
+<span class="hljs-meta">    @x.deleter</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">x</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">del</span> self._x
+
+<span class="hljs-keyword">if</span> __name__==<span class="hljs-string">&quot;__main__&quot;</span>:
+    acc = Account(<span class="hljs-string">&quot;24&quot;</span>)
+    <span class="hljs-keyword">print</span> acc.x
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x573A;&#x666F;:
+(1)&#x7C7B;&#x578B;&#x68C0;&#x67E5;
+(2)&#x4EE5;&#x67D0;&#x79CD;&#x65B9;&#x5F0F;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;&#x8BBF;&#x95EE;
+(3)&#x5047;&#x8BBE;&#x5728;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E9B;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x7ACB;&#x523B;&#x521D;&#x59CB;&#x5316;&#x7136;&#x540E;&#x53D8;&#x6210;&#x53EA;&#x8BFB;&#x7684;&#x5C5E;&#x6027;</p>
+<h2 id="12-&#x5C5E;&#x6027;&#x89E3;&#x6790;&#x673A;&#x5236;">1.2 &#x5C5E;&#x6027;&#x89E3;&#x6790;&#x673A;&#x5236;</h2>
+<p>&#x5BF9;&#x4E8E;&#x5BF9;&#x8C61;&#x6765;&#x8BF4;&#xFF0C;&#x5C5E;&#x6027;&#x89E3;&#x6790;&#x673A;&#x5236;&#x5728;object.<strong>getattribute</strong>()&#x4E2D;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x5C06;b.x&#x8F6C;&#x6362;&#x6210;type(b).<strong>dict</strong>[&#x2018;x&#x2019;].<strong>get</strong>(b, type(b))&#x3002;&#x7136;&#x540E;&#xFF0C;&#x89E3;&#x6790;&#x673A;&#x5236;&#x4F7F;&#x7528;&#x4F18;&#x5148;&#x7EA7;&#x94FE;&#x641C;&#x7D22;&#x5C5E;&#x6027;&#xFF0C;&#x5728;&#x4F18;&#x5148;&#x7EA7;&#x94FE;&#x4E2D;&#xFF0C;&#x7C7B;&#x5B57;&#x5178;&#x4E2D;&#x53D1;&#x73B0;&#x7684;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF0C;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x975E;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E86;getattr()&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x94FE;&#x4F1A;&#x4E3A;getattr()&#x5206;&#x914D;&#x6700;&#x4F4E;&#x4F18;&#x5148;&#x7EA7;&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;<strong>getattribute</strong>&#x65B9;&#x6CD5;&#x6765;&#x91CD;&#x5199;&#x4F18;&#x5148;&#x7EA7;&#x94FE;&#x3002;</p>
+<h2 id="13-&#x4F7F;&#x7528;slots&#x8FDB;&#x884C;&#x7C7B;&#x5C5E;&#x6027;&#x7684;&#x9650;&#x5B9A;">1.3 &#x4F7F;&#x7528;<strong>slots</strong>&#x8FDB;&#x884C;&#x7C7B;&#x5C5E;&#x6027;&#x7684;&#x9650;&#x5B9A;</h2>
+<p>&#x4F7F;&#x7528;<strong>slots</strong></p>
+<p>&#x6CE8;&#x610F;: <strong>slots</strong>&#x53EA;&#x5BF9;&#x5F53;&#x524D;&#x7C7B;&#x751F;&#x6548;</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span><span class="hljs-params">(object)</span>:</span>
+<span class="hljs-meta">... </span>    __slots__ = (<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>) <span class="hljs-comment"># &#x7528;tuple&#x5B9A;&#x4E49;&#x5141;&#x8BB8;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x79F0;</span>
+</code></pre>
+<h1 id="2&#x4F7F;&#x7528;call&#x65B9;&#x6CD5;&#x4F7F;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x88AB;&#x5F53;&#x6210;&#x65B9;&#x6CD5;&#x8C03;&#x7528;">2.&#x4F7F;&#x7528;<strong>call</strong>&#x65B9;&#x6CD5;&#x4F7F;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x88AB;&#x5F53;&#x6210;&#x65B9;&#x6CD5;&#x8C03;&#x7528;</h1>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tst</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&quot;Call&quot;</span>)
+
+<span class="hljs-keyword">if</span> __name__==<span class="hljs-string">&quot;__main__&quot;</span>:
+    t = Tst()
+    t()
+</code></pre>
+<h1 id="3-&#x7C7B;&#x65B9;&#x6CD5;&#x9759;&#x6001;&#x65B9;&#x6CD5;">3. &#x7C7B;&#x65B9;&#x6CD5;/&#x9759;&#x6001;&#x65B9;&#x6CD5;</h1>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&apos;&apos;&apos;
+File Name: &#x9759;&#x6001;&#x65B9;&#x6CD5;&#x548C;&#x7C7B;&#x65B9;&#x6CD5;.py
+Author: WillDX
+mail: xiang.dai@shuyun.com
+Created Time: &#x4E09;  7/ 6 15:20:50 2016
+&apos;&apos;&apos;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Washer</span>:</span>
+    company = <span class="hljs-string">&quot;Le Xi&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,water=<span class="hljs-number">10</span>,scour=<span class="hljs-number">2</span>)</span>:</span>
+        self._water = water
+        self.scour = scour
+        self.year = <span class="hljs-number">2010</span>
+
+<span class="hljs-meta">    @staticmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">spins_ml</span><span class="hljs-params">(spins)</span>:</span>
+        <span class="hljs-comment"># print(&quot;company:&quot;,Washer.company)</span>
+        <span class="hljs-comment"># print(&apos;year:&apos;,self.year)</span>
+        <span class="hljs-keyword">return</span> spins * <span class="hljs-number">0.4</span>
+
+<span class="hljs-meta">    @classmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_washer</span><span class="hljs-params">(cls,water,scour)</span>:</span>
+        print(<span class="hljs-string">&quot;company:&quot;</span>,Washer.company)
+        print(<span class="hljs-string">&apos;year:&apos;</span>,self.year)
+        <span class="hljs-keyword">return</span> cls(water,cls.spins_ml(scour))
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">water</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self._water
+
+<span class="hljs-meta">    @water.setter</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">water</span><span class="hljs-params">(self,water)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt; water &lt;=<span class="hljs-number">500</span>:
+            self._water = water
+        <span class="hljs-keyword">else</span>:
+            print(<span class="hljs-string">&quot;set Failure!&quot;</span>)
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">total_year</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">2015</span> - self.year
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_water</span><span class="hljs-params">(self,water)</span>:</span>
+        self.water = water
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_scour</span><span class="hljs-params">(self,scour)</span>:</span>
+        self.scour = scour
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_water</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;Add water:&apos;</span>,self.water)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_scour</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;Add scour:&apos;</span>,self.scour)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_wash</span><span class="hljs-params">(self)</span>:</span>
+        self.add_water()
+        self.add_scour()
+        print(<span class="hljs-string">&apos;Start wash...&apos;</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+<span class="hljs-string">&quot;&quot;&quot;
+&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x8981;&#x4F7F;&#x7528;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x518D;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x3002;
+&#x800C;&#x4F7F;&#x7528;@staticmethod&#x6216;@classmethod&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x4F8B;&#x5316;&#xFF0C;&#x76F4;&#x63A5;&#x7C7B;&#x540D;.&#x65B9;&#x6CD5;&#x540D;()&#x6765;&#x8C03;&#x7528;&#x3002;
+&#x8FD9;&#x6709;&#x5229;&#x4E8E;&#x7EC4;&#x7EC7;&#x4EE3;&#x7801;&#xFF0C;&#x628A;&#x67D0;&#x4E9B;&#x5E94;&#x8BE5;&#x5C5E;&#x4E8E;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;&#x51FD;&#x6570;&#x7ED9;&#x653E;&#x5230;&#x90A3;&#x4E2A;&#x7C7B;&#x91CC;&#x53BB;&#xFF0C;&#x540C;&#x65F6;&#x6709;&#x5229;&#x4E8E;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x6574;&#x6D01;&#x3002;
+
+&#x65E2;&#x7136;@staticmethod&#x548C;@classmethod&#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7C7B;&#x540D;.&#x65B9;&#x6CD5;&#x540D;()&#x6765;&#x8C03;&#x7528;&#xFF0C;&#x90A3;&#x4ED6;&#x4EEC;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x5462;
+&#x4ECE;&#x5B83;&#x4EEC;&#x7684;&#x4F7F;&#x7528;&#x4E0A;&#x6765;&#x770B;,
+@staticmethod&#x4E0D;&#x9700;&#x8981;&#x8868;&#x793A;&#x81EA;&#x8EAB;&#x5BF9;&#x8C61;&#x7684;self&#x548C;&#x81EA;&#x8EAB;&#x7C7B;&#x7684;cls&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x8DDF;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x4E00;&#x6837;&#x3002;
+@classmethod&#x4E5F;&#x4E0D;&#x9700;&#x8981;self&#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x9700;&#x8981;&#x662F;&#x8868;&#x793A;&#x81EA;&#x8EAB;&#x7C7B;&#x7684;cls&#x53C2;&#x6570;&#x3002;
+&#x5982;&#x679C;&#x5728;@staticmethod&#x4E2D;&#x8981;&#x8C03;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x80FD;&#x76F4;&#x63A5;&#x7C7B;&#x540D;.&#x5C5E;&#x6027;&#x540D;&#x6216;&#x7C7B;&#x540D;.&#x65B9;&#x6CD5;&#x540D;&#x3002;
+&#x800C;@classmethod&#x56E0;&#x4E3A;&#x6301;&#x6709;cls&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x6765;&#x8C03;&#x7528;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x7B49;&#xFF0C;&#x907F;&#x514D;&#x786C;&#x7F16;&#x7801;&#x3002;
+
+&#x603B;&#x7ED3;: 
+&#x7B80;&#x5355;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;@staticmethod, &#x9700;&#x8981;&#x8C03;&#x7528;&#x7C7B;&#x7684;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x65F6;&#x4F7F;&#x7528;@classmethod
+&quot;&quot;&quot;</span>
+    <span class="hljs-comment"># print(Washer.spins_ml(8))</span>
+    <span class="hljs-comment"># w = Washer()</span>
+    <span class="hljs-comment"># print(w.spins_ml(8))</span>
+    <span class="hljs-comment"># w = Washer(200,Washer.spins_ml(9))</span>
+    <span class="hljs-comment"># w.start_wash()</span>
+    w = Washer.get_washer(<span class="hljs-number">100</span>,<span class="hljs-number">9</span>)
+    w.start_wash()
+</code></pre>
+<h1 id="4-&#x7C7B;&#x7684;&#x7EE7;&#x627F;&#x91CD;&#x8F7D;">4. &#x7C7B;&#x7684;&#x7EE7;&#x627F;/&#x91CD;&#x8F7D;</h1>
+<h2 id="41-&#x7EE7;&#x627F;">4.1 &#x7EE7;&#x627F;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&apos;&apos;&apos;
+File Name: &#x7C7B;&#x7684;&#x7EE7;&#x627F;.py
+Author: WillDX
+mail: xiang.dai@shuyun.com
+Created Time: &#x4E09;  7/ 6 15:48:15 2016
+&apos;&apos;&apos;</span>
+<span class="hljs-comment">#&#x7C7B;&#x7684;&#x7EE7;&#x627F;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Washer</span>:</span>
+    company = <span class="hljs-string">&quot;Le Xi&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,water=<span class="hljs-number">10</span>,scour=<span class="hljs-number">2</span>)</span>:</span>
+        self._water = water
+        self.scour = scour
+
+<span class="hljs-meta">    @staticmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">spins_ml</span><span class="hljs-params">(spins)</span>:</span>
+        <span class="hljs-keyword">return</span> spins * <span class="hljs-number">0.4</span>
+
+<span class="hljs-meta">    @classmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_washer</span><span class="hljs-params">(cls,water,scour)</span>:</span>
+        <span class="hljs-keyword">return</span> cls(water,cls.spins_ml(scour))
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">water</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self._water
+
+<span class="hljs-meta">    @water.setter</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">water</span><span class="hljs-params">(self,water)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt; water &lt;=<span class="hljs-number">500</span>:
+            self._water = water
+        <span class="hljs-keyword">else</span>:
+            print(<span class="hljs-string">&quot;set Failure!&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_scour</span><span class="hljs-params">(self,scour)</span>:</span>
+        self.scour = scour
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_water</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;Add water:&apos;</span>,self.water)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_scour</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;Add scour:&apos;</span>,self.scour)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_wash</span><span class="hljs-params">(self)</span>:</span>
+        self.add_water()
+        self.add_scour()
+        print(<span class="hljs-string">&apos;Start wash...&apos;</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WasherDry</span><span class="hljs-params">(Washer)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dry</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;Dry clothes...&apos;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_wash</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&quot;....&quot;</span>)
+        super().start_wash()
+        print(<span class="hljs-string">&quot;....&quot;</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    w = WasherDry()
+    w.start_wash()
+    print(w.scour,w.company)
+    w.dry()
+</code></pre>
+<h2 id="42-&#x91CD;&#x8F7D;">4.2 &#x91CD;&#x8F7D;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&apos;&apos;&apos;
+File Name: &#x65B9;&#x6CD5;&#x91CD;&#x8F7D;.py
+&apos;&apos;&apos;</span>
+<span class="hljs-keyword">import</span> random
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sprite</span>:</span>
+
+    step = [<span class="hljs-number">-2</span>,+<span class="hljs-number">2</span>,<span class="hljs-number">-3</span>,+<span class="hljs-number">3</span>]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,gm,point=None)</span>:</span>
+        self.gm = gm
+        <span class="hljs-keyword">if</span> point <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            self.point = random.randint(<span class="hljs-number">0</span>,<span class="hljs-number">20</span>)
+        <span class="hljs-keyword">else</span>:
+            self.point = point
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">jump</span><span class="hljs-params">(self)</span>:</span>
+        astep = random.choice(Sprite.step)
+        <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= self.point + astep &lt;= <span class="hljs-number">20</span>:
+            self.point += astep
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ant</span><span class="hljs-params">(Sprite)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,gm,point=None)</span>:</span>
+        super().__init__(gm,point)
+        self.gm.set_point(<span class="hljs-string">&apos;ant&apos;</span>,self.point)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">jump</span><span class="hljs-params">(self)</span>:</span>
+        super().jump()
+        self.gm.set_point(<span class="hljs-string">&apos;ant&apos;</span>,self.point)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Worm</span><span class="hljs-params">(Sprite)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,gm,point=None)</span>:</span>
+        super().__init__(gm,point)
+        self.gm.set_point(<span class="hljs-string">&apos;worm&apos;</span>,self.point)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span>  <span class="hljs-title">jump</span><span class="hljs-params">(self)</span>:</span>
+        super().jump()
+        self.gm.set_point(<span class="hljs-string">&apos;worm&apos;</span>,self.point)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GameMap</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.ant_point = <span class="hljs-keyword">None</span>
+        self.worm_point = <span class="hljs-keyword">None</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">catched</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">&apos;ant:&apos;</span>,self.ant_point,<span class="hljs-string">&apos;worm:&apos;</span>,self.worm_point)
+        <span class="hljs-keyword">if</span> self.ant_point <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">and</span> self.worm_point <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">and</span> self.ant_point == self.worm_point:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_point</span><span class="hljs-params">(self,src,point)</span>:</span>
+        <span class="hljs-keyword">if</span> src == <span class="hljs-string">&apos;ant&apos;</span>:
+            self.ant_point = point
+        <span class="hljs-keyword">if</span> src == <span class="hljs-string">&apos;worm&apos;</span>:
+            self.worm_point = point
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    gm = GameMap()
+    worm = Worm(gm)
+    ant = Ant(gm)
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> gm.catched():
+        worm.jump()
+        ant.jump()
+</code></pre>
+<h1 id="5-&#x7279;&#x6B8A;&#x7684;&#x7C7B;">5. &#x7279;&#x6B8A;&#x7684;&#x7C7B;</h1>
+<h2 id="51-&#x5143;&#x7C7B;">5.1 &#x5143;&#x7C7B;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&apos;&apos;&apos;
+File Name: &#x7C7B;&#x7684;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;.py
+&apos;&apos;&apos;</span>
+<span class="hljs-comment">#&#x7C7B;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x5177;&#x6709;&#x521B;&#x5EFA;&#x5176;&#x81EA;&#x8EAB;&#x5B9E;&#x4F8B;&#x7684;&#x80FD;&#x529B;&#x3002;</span>
+<span class="hljs-comment">#&#x7C7B;&#x53EF;&#x4EE5;&#x548C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x3002;</span>
+<span class="hljs-comment">#&#x4F60;&#x53EF;&#x4EE5;&#x4E3A;&#x7C7B;&#x589E;&#x52A0;&#x5C5E;&#x6027;&#x3002;</span>
+<span class="hljs-comment">#&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x3002;</span>
+<span class="hljs-comment">#&#x7C7B;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x8005;(type),&#x6240;&#x6709;&#x7684;&#x7C7B;&#x90FD;&#x662F;&#x5143;&#x7C7B;(type)&#x7684;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-comment">#&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x8FC7;&#x7A0B;: __new__(),__init__()</span>
+<span class="hljs-string">&apos;&apos;&apos;
+class Custom:
+    def __init__(self):
+        print(&quot;Init&quot;)
+
+    def __new__(cls,*args,**kwargs):
+        print &quot;New&quot;
+        return object.__new__(cls,*args,**kwargs)
+
+if __name__==&quot;__main__&quot;:
+    Custom()
+&apos;&apos;&apos;</span>
+
+<span class="hljs-comment">#&#x4F7F;&#x7528;type&#x521B;&#x5EFA;&#x7C7B;</span>
+<span class="hljs-string">&apos;&apos;&apos;
+Hello = type(&apos;Hello&apos;,(object,),dict(helo=lambda lf:print(&quot;Hello!!!&quot;)))
+h = Hello()
+h.helo()
+&apos;&apos;&apos;</span>
+
+<span class="hljs-comment">#&#x81EA;&#x5B9A;&#x4E49;&#x5143;&#x7C7B;:&#x5BF9;&#x521B;&#x5EFA;&#x7684;&#x7C7B;&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;</span>
+<span class="hljs-comment">#&#x7EE7;&#x627F;type</span>
+<span class="hljs-comment">#&#x81EA;&#x5B9A;&#x4E49;__new__(),__init__()&#x65B9;&#x6CD5;</span>
+<span class="hljs-string">&apos;&apos;&apos;
+# -*- coding: utf-8 -*-
+class MyMeta(type):
+    def __init__(self,name,bases,dicts):
+        print(&apos;Init Instance.&apos;)
+
+    def __new__(cls,name,bases,dicts):
+        print(&quot;cls:&quot;,type(cls))
+        print(&quot;name:{},type_name:{}&quot;.format(name,type(name)))
+        print(&quot;bases:{},type_bases:{}&quot;.format(bases,type(bases)))
+        dicts[&apos;info&apos;] = lambda self:print(&apos;Djx.&apos;)
+        res = type.__new__(cls,name,bases,dicts) 
+        res.company = &apos;MaiZi&apos;
+        return res
+
+class custom(metaclass=MyMeta):
+    pass
+
+if __name__ == &apos;__main__&apos;:
+    cus = custom()
+    cus.info()
+    print(cus.company)
+
+#class cus:
+#    __metaclass__ = MyMeta
+#    pass
+#
+#__metaclass__ = MyMeta
+</span></code></pre>
+<h2 id="52-&#x5E8F;&#x5217;&#x7C7B;">5.2 &#x5E8F;&#x5217;&#x7C7B;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&apos;&apos;&apos;
+File Name: &#x5E8F;&#x5217;&#x7C7B;.py
+Author: WillDX
+mail: xiang.dai@shuyun.com
+Created Time: &#x4E09;  7/ 6 16:36:23 2016
+&apos;&apos;&apos;</span>
+
+<span class="hljs-comment">#__len__(self)</span>
+<span class="hljs-comment">#__getitem__(self,key)</span>
+<span class="hljs-comment">#__setitem__(self,key,value)</span>
+<span class="hljs-comment">#__delitem__(self,key)</span>
+
+<span class="hljs-keyword">import</span> sys
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MySeq</span><span class="hljs-params">(object)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.lseq = [<span class="hljs-string">&quot;I&quot;</span>,<span class="hljs-string">&quot;II&quot;</span>,<span class="hljs-string">&quot;III&quot;</span>,<span class="hljs-string">&quot;IV&quot;</span>]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__len__</span><span class="hljs-params">(self)</span>:</span>
+        self.len(self.lseq)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__getitem__</span><span class="hljs-params">(self,key)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= key &lt; <span class="hljs-number">4</span>:
+            <span class="hljs-keyword">return</span> self.lseq[key]
+
+<span class="hljs-keyword">if</span> __name__==<span class="hljs-string">&quot;__main__&quot;</span>:
+    m = MySeq()
+    <span class="hljs-keyword">print</span> m,type(m)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> m:
+        <span class="hljs-keyword">print</span> i
+        sys.exit()
+</code></pre>
+<h2 id="53-&#x6784;&#x9020;iter&#x7C7B;">5.3 &#x6784;&#x9020;<strong>iter</strong>&#x7C7B;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+File Name: &#x6784;&#x9020;iter&#x7C7B;.py
+&quot;&quot;&quot;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyIter</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,start,end)</span>:</span>
+        self.count = start
+        self.end = end
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__iter__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">next</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> self.count &lt; self.end:
+            r = self.count
+            self.count += <span class="hljs-number">1</span>
+            <span class="hljs-keyword">return</span> r
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">raise</span> StopIteration
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> MyIter(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>):
+        print(i)
+</code></pre>
+<h2 id="54-&#x6BD4;&#x8F83;&#x7C7B;">5.4 &#x6BD4;&#x8F83;&#x7C7B;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+File Name: &#x6BD4;&#x8F83;&#x7C7B;.py
+&quot;&quot;&quot;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,x,y)</span>:</span>
+        self.x = x
+        self.y = y
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__lt__</span><span class="hljs-params">(self,oth)</span>:</span>
+        <span class="hljs-keyword">return</span> self.x &lt; oth.x
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__gt__</span><span class="hljs-params">(self,oth)</span>:</span>
+        <span class="hljs-keyword">return</span> self.y &gt; oth.y
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    pa = Point(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)
+    pb = Point(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>)
+    print(pa &lt; pb)
+    print(pa &gt; pb)
+</code></pre>
+<h2 id="55-&#x76F8;&#x52A0;&#x7C7B;">5.5 &#x76F8;&#x52A0;&#x7C7B;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+File Name: &#x76F8;&#x52A0;&#x7C7B;.py
+&quot;&quot;&quot;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,x,y)</span>:</span>
+        self.x = x
+        self.y = y
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__add__</span><span class="hljs-params">(self,oth)</span>:</span>
+        <span class="hljs-keyword">return</span> Point(self.x + oth.x , self.y + oth.y)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span><span class="hljs-params">(self)</span>:</span>
+        print(self.x,self.y)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    pa = Point(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)
+    pb = Point(<span class="hljs-number">3</span>,<span class="hljs-number">4</span>)
+    pc = pa + pb
+    pc.info()
+</code></pre>
+<h1 id="6-&#x9E2D;&#x5B50;&#x7C7B;&#x578B;&#x4E0E;&#x591A;&#x6001;">6. &#x9E2D;&#x5B50;&#x7C7B;&#x578B;&#x4E0E;&#x591A;&#x6001;</h1>
+<p>&#x591A;&#x6001;&#x662F;&#x52A8;&#x6001;&#x8BED;&#x8A00;&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x6548;, &#x5E76;&#x4E0D;&#x8981;&#x6C42;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x578B;, &#x4F8B;&#x5982;: repr()</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>repr([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>])
+<span class="hljs-string">&apos;[1, 2, 3]&apos;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>repr(<span class="hljs-number">1</span>)
+<span class="hljs-string">&apos;1&apos;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>repr({<span class="hljs-string">&quot;lang&quot;</span>:<span class="hljs-string">&quot;python&quot;</span>})
+<span class="hljs-string">&quot;{&apos;lang&apos;: &apos;Python&apos;}&quot;</span>
+</code></pre>
+<p><a href="http://wiki.jikexueyuan.com/project/start-learning-python/211.html" target="_blank">&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x8003;: &#x6781;&#x5BA2;&#x5B66;&#x9662;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="面向对象编程.html" class="navigation navigation-prev " aria-label="Previous page: 2.面向对象编程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="魔法方法.md" class="navigation navigation-next " aria-label="Next page: 魔法方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.面向对象进阶","level":"3.2.3","depth":2,"next":{"title":"魔法方法","level":"3.3","depth":1,"path":"魔法方法.md","ref":"魔法方法.md","articles":[]},"previous":{"title":"2.面向对象编程","level":"3.2.2","depth":2,"path":"面向对象编程.md","ref":"面向对象编程.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"面向对象进阶.md","mtime":"2018-06-25T15:57:03.476Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T16:17:28.845Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

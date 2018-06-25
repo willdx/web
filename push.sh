@@ -5,4 +5,5 @@ cp -r _book/* .
 git add --all
 git commit -m "$1"
 git push origin master
-echo "Finish!"
+echo "Finish! next start local serve"
+gitbook serve
